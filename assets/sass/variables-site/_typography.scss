@@ -1,0 +1,16 @@
+// @include font-face(
+//   "century_gothic",
+//   inline-font-files(
+//     'century_gothic.woff', woff,
+//     'century_gothic.ttf', ttf,
+//     'century_gothic.svg', svg),
+//   'century_gothic.eot',
+//   normal, // font-weight
+//   normal  // font-style
+// );
+
+$font__main: "Poppins", Helvetica, sans-serif;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;

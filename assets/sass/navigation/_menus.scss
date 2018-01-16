@@ -1,0 +1,232 @@
+/* Luxbar */
+
+.luxbar-fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.luxbar-hamburger span {
+  display: block;
+  height: 2px;
+  width: 26px;
+  transition: 0.6s ease;
+  &::before, &::after {
+    display: block;
+    height: 2px;
+    width: 26px;
+    transition: 0.6s ease;
+  }
+}
+
+.luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span {
+  background-color: transparent;
+  &::before, &::after {
+    margin-top: 0;
+  }
+}
+
+.luxbar-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: $size__main-navigation;
+}
+
+.luxbar-menu-left {
+  .luxbar-navigation, .luxbar-header {
+    justify-content: flex-start;
+  }
+}
+
+.luxbar-menu-right .luxbar-hamburger {
+  margin-left: auto;
+}
+
+.luxbar-brand {
+  height: $size__main-navigation;
+  margin-left: 10px;
+  max-width: 90px;
+  width: auto;
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.luxbar-menu {
+  min-height: $size__main-navigation;
+  transition: 0.6s ease;
+  width: 100%;
+}
+
+.luxbar-navigation {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.luxbar-menu a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.luxbar-hamburger {
+  padding: 18px 24px 18px 24px;
+  position: relative;
+  cursor: pointer;
+  span {
+    &::before, &::after {
+      content: '';
+      position: absolute;
+    }
+    &::before {
+      margin-top: -8px;
+    }
+    &::after {
+      margin-top: 8px;
+    }
+  }
+}
+
+.luxbar-checkbox {
+  display: none;
+  &:not(:checked) ~ .luxbar-menu {
+    overflow: hidden;
+    height: $size__main-navigation;
+  }
+  &:checked ~ .luxbar-menu {
+    transition: height 0.6s ease;
+    height: 100vh;
+    overflow: auto;
+  }
+}
+
+.menu-item-has-children {
+  position: relative;
+  height: auto;
+  min-height: $size__main-navigation;
+  &:hover > ul {
+    position: relative;
+    display: block;
+    min-width: 200px;
+  }
+  > {
+    a::after {
+      position: absolute;
+      content: '';
+      right: 10px;
+      top: 25px;
+      border-width: 5px 5px 0;
+      border-color: transparent;
+      border-style: solid;
+    }
+    ul {
+      display: block;
+      overflow-x: hidden;
+      list-style: none;
+      padding: 0;
+      .luxbar-item {
+        min-width: 100%;
+        height: 29px;
+        padding: 5px 10px 5px 40px;
+        a {
+          min-height: 29px;
+          line-height: 29px;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $phablet) {
+  .luxbar-navigation {
+    flex-flow: row;
+    justify-content: flex-end;
+    li {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+    }
+  }
+  .luxbar-hamburger {
+    display: none;
+  }
+  .luxbar-checkbox {
+    &:not(:checked) ~ .luxbar-menu {
+      overflow: visible;
+    }
+    &:checked ~ .luxbar-menu {
+      height: $size__main-navigation;
+    }
+  }
+  .luxbar-menu .luxbar-item {
+    border-top: 0;
+  }
+  .luxbar-menu-right .luxbar-header {
+    margin-right: auto;
+  }
+  .menu-item-has-children {
+    height: $size__main-navigation;
+    &:hover > ul {
+      position: absolute;
+      left: 0;
+      top: $size__main-navigation;
+      padding: 0;
+    }
+    > ul {
+      display: none;
+      .luxbar-item {
+        padding: 5px 10px;
+        a {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+.luxbar-checkbox:checked + .luxbar-menu {
+  .luxbar-hamburger-doublespin span {
+    &::before {
+      transform: rotate(225deg);
+    }
+    &::after {
+      transform: rotate(-225deg);
+    }
+  }
+  .luxbar-hamburger-spin span {
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.luxbar-menu-light {
+  background-color: #fff;
+  color: #333;
+  .menu-item-has-children ul {
+    background-color: #fff;
+    color: #333;
+  }
+  .active, .luxbar-item:hover {
+    background-color: #bdbdbd;
+  }
+  .luxbar-hamburger span {
+    background-color: #212121;
+    &::before, &::after {
+      background-color: #212121;
+    }
+  }
+}

@@ -1,0 +1,2967 @@
+@charset "UTF-8";
+/*!
+Theme Name: nancyconsulting
+Theme URI: https://nancyconsulting.com
+Author: Nicolas Gillium
+Author URI: https://nicolas-gillium.fr
+Description: Hi. I'm the corporate theme called <code>nancyconsulting</code> bla bla bla.
+Version: 2.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: ncv2
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+nancyconsulting is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Vital.css
+--------------------------------------------------------------*/
+/* line 7, assets/sass/vital/_normalize.sass */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 18, assets/sass/vital/_normalize.sass */
+body {
+  margin: 0;
+}
+
+/* line 29, assets/sass/vital/_normalize.sass */
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 36, assets/sass/vital/_normalize.sass */
+audio, canvas, progress, video {
+  display: inline-block;
+}
+
+/* line 42, assets/sass/vital/_normalize.sass */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 49, assets/sass/vital/_normalize.sass */
+progress {
+  vertical-align: baseline;
+}
+
+/* line 56, assets/sass/vital/_normalize.sass */
+template, [hidden] {
+  display: none;
+}
+
+/* line 65, assets/sass/vital/_normalize.sass */
+a {
+  background-color: transparent;
+}
+/* line 67, assets/sass/vital/_normalize.sass */
+a:active, a:hover {
+  outline-width: 0;
+}
+
+/* line 81, assets/sass/vital/_normalize.sass */
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+/* line 92, assets/sass/vital/_normalize.sass */
+b, strong {
+  font-weight: inherit;
+}
+
+/* line 98, assets/sass/vital/_normalize.sass */
+b, strong {
+  font-weight: bolder;
+}
+
+/* line 104, assets/sass/vital/_normalize.sass */
+dfn {
+  font-style: italic;
+}
+
+/* line 111, assets/sass/vital/_normalize.sass */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 118, assets/sass/vital/_normalize.sass */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/* line 125, assets/sass/vital/_normalize.sass */
+small {
+  font-size: 80%;
+}
+
+/* line 132, assets/sass/vital/_normalize.sass */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 138, assets/sass/vital/_normalize.sass */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 141, assets/sass/vital/_normalize.sass */
+sup {
+  top: -0.5em;
+}
+
+/* line 150, assets/sass/vital/_normalize.sass */
+img {
+  border-style: none;
+}
+
+/* line 156, assets/sass/vital/_normalize.sass */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 166, assets/sass/vital/_normalize.sass */
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* line 175, assets/sass/vital/_normalize.sass */
+figure {
+  margin: 1em 40px;
+}
+
+/* line 182, assets/sass/vital/_normalize.sass */
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+/* line 196, assets/sass/vital/_normalize.sass */
+button, input, select, textarea {
+  font: inherit;
+}
+
+/* line 202, assets/sass/vital/_normalize.sass */
+optgroup {
+  font-weight: bold;
+}
+
+/* line 210, assets/sass/vital/_normalize.sass */
+button, input, select {
+  overflow: visible;
+}
+
+/* line 218, assets/sass/vital/_normalize.sass */
+button, input, select, textarea {
+  margin: 0;
+}
+
+/* line 226, assets/sass/vital/_normalize.sass */
+button, select {
+  text-transform: none;
+}
+
+/* line 233, assets/sass/vital/_normalize.sass */
+button, [type="button"], [type="reset"], [type="submit"] {
+  cursor: pointer;
+}
+
+/* line 239, assets/sass/vital/_normalize.sass */
+[disabled] {
+  cursor: default;
+}
+
+/* line 247, assets/sass/vital/_normalize.sass */
+button, html [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+}
+
+/* line 254, assets/sass/vital/_normalize.sass */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 261, assets/sass/vital/_normalize.sass */
+button:-moz-focusring, input:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/* line 267, assets/sass/vital/_normalize.sass */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 278, assets/sass/vital/_normalize.sass */
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+/* line 295, assets/sass/vital/_normalize.sass */
+textarea {
+  overflow: auto;
+}
+
+/* line 302, assets/sass/vital/_normalize.sass */
+[type="checkbox"], [type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 312, assets/sass/vital/_normalize.sass */
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* line 318, assets/sass/vital/_normalize.sass */
+[type="search"] {
+  -webkit-appearance: textfield;
+}
+/* line 320, assets/sass/vital/_normalize.sass */
+[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 1, assets/sass/vital/_grid.sass */
+[class*='col-'] {
+  float: left;
+}
+
+/* line 4, assets/sass/vital/_grid.sass */
+.col-1-3 {
+  width: 33.33%;
+}
+
+/* line 6, assets/sass/vital/_grid.sass */
+.col-2-3 {
+  width: 66.66%;
+}
+
+/* line 8, assets/sass/vital/_grid.sass */
+.col-1-2 {
+  width: 50%;
+}
+
+/* line 10, assets/sass/vital/_grid.sass */
+.col-1-4 {
+  width: 25%;
+}
+
+/* line 12, assets/sass/vital/_grid.sass */
+.col-3-4 {
+  width: 75%;
+}
+
+/* line 14, assets/sass/vital/_grid.sass */
+.col-1-5 {
+  width: 20%;
+}
+
+/* line 16, assets/sass/vital/_grid.sass */
+.col-1-8 {
+  width: 12.5%;
+}
+
+/* line 19, assets/sass/vital/_grid.sass */
+.autogrid {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* line 23, assets/sass/vital/_grid.sass */
+.col {
+  width: auto;
+  display: table-cell;
+  vertical-align: top;
+}
+
+@media screen and (max-width: 860px) {
+  /* line 30, assets/sass/vital/_grid.sass */
+  [class*='col-'], .col {
+    width: 100%;
+  }
+
+  /* line 33, assets/sass/vital/_grid.sass */
+  .col {
+    display: block;
+  }
+}
+/* line 5, assets/sass/vital/_base.sass */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* line 8, assets/sass/vital/_base.sass */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 12, assets/sass/vital/_base.sass */
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  background: #FAFAFA;
+  color: #444;
+  font: 17px/1.7 "Helvetica Neue", Helvetica, Sans-Serif;
+}
+/* line 17, assets/sass/vital/_base.sass */
+body:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 22, assets/sass/vital/_base.sass */
+img {
+  height: auto;
+  border-radius: 0.15em;
+}
+
+/* line 28, assets/sass/vital/_base.sass */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+/* line 31, assets/sass/vital/_base.sass */
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin: 1em 0;
+  margin: 1rem 0;
+}
+
+/* line 35, assets/sass/vital/_base.sass */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.5;
+}
+
+/* line 38, assets/sass/vital/_base.sass */
+ul, ol {
+  padding: 0;
+}
+
+/* line 40, assets/sass/vital/_base.sass */
+li {
+  list-style: none;
+}
+
+/* line 43, assets/sass/vital/_base.sass */
+a {
+  color: #C9282E;
+  text-decoration: none;
+  outline: 0;
+}
+/* line 47, assets/sass/vital/_base.sass */
+a:hover {
+  color: #FF0008;
+  transition: color 200ms ease-in-out;
+}
+/* line 50, assets/sass/vital/_base.sass */
+a:focus {
+  outline: none;
+}
+
+/* line 53, assets/sass/vital/_base.sass */
+blockquote {
+  margin: 1em 0;
+  padding: 0 1em;
+  border-left: 0.4em solid #EEE;
+}
+
+/* line 58, assets/sass/vital/_base.sass */
+strong, b, .bold {
+  font-weight: 500;
+}
+
+/* line 61, assets/sass/vital/_base.sass */
+hr {
+  border: none;
+  background: #EEE;
+  clear: both;
+  margin: 1.5em auto;
+  height: 1px;
+}
+/* line 67, assets/sass/vital/_base.sass */
+hr.half {
+  width: 50%;
+}
+/* line 69, assets/sass/vital/_base.sass */
+hr.small {
+  width: 5em;
+}
+
+/* line 72, assets/sass/vital/_base.sass */
+pre {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* line 76, assets/sass/vital/_base.sass */
+code {
+  color: #333;
+  font-family: "Monaco", Menlo, Courier;
+  font-size: 0.7em;
+  background: #EEE;
+  padding: 0.9em 0.8em;
+  margin: 0 0.3em 0 0.2em;
+  border-radius: 0.15em;
+  display: inline-block;
+  word-break: break-word;
+}
+/* line 86, assets/sass/vital/_base.sass */
+p code {
+  display: inline;
+  padding: 0.1em 0.4em 0.1em 0.3em;
+  margin: 0 0.3em 0 0;
+}
+
+/* line 91, assets/sass/vital/_base.sass */
+dl {
+  display: table;
+  width: 100%;
+}
+
+/* line 94, assets/sass/vital/_base.sass */
+dt, dd {
+  display: table-cell;
+  vertical-align: top;
+  float: left;
+  clear: both;
+}
+
+/* line 99, assets/sass/vital/_base.sass */
+dt {
+  color: #666;
+  font-size: 0.85em;
+}
+
+/* line 102, assets/sass/vital/_base.sass */
+dd {
+  color: black;
+  font-weight: 400;
+  padding-bottom: 0.3em;
+}
+/* line 106, assets/sass/vital/_base.sass */
+dd:after {
+  content: " ";
+}
+/* line 108, assets/sass/vital/_base.sass */
+dd i {
+  margin: 0 1em 0 0;
+}
+
+/* line 111, assets/sass/vital/_base.sass */
+.contents {
+  background: white;
+  min-height: 24em;
+}
+
+/* line 115, assets/sass/vital/_base.sass */
+.row {
+  clear: both;
+  width: 100%;
+}
+
+/* line 119, assets/sass/vital/_base.sass */
+.section {
+  padding: 1em;
+  margin: 0 auto;
+  width: 90%;
+}
+
+@media screen and (min-width: 1440px) {
+  /* line 126, assets/sass/vital/_base.sass */
+  .section {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1680px) {
+  /* line 131, assets/sass/vital/_base.sass */
+  .section {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 860px) {
+  /* line 136, assets/sass/vital/_base.sass */
+  .section {
+    width: 100%;
+  }
+}
+/* line 5, assets/sass/vital/_buttons.sass */
+.btn {
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border-radius: 0.15em;
+  border: 1px solid #666;
+  box-shadow: none;
+  color: #666;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.05em;
+  height: auto;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 0.76em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  white-space: nowrap;
+}
+/* line 24, assets/sass/vital/_buttons.sass */
+.btn:hover {
+  border-color: #666;
+}
+/* line 26, assets/sass/vital/_buttons.sass */
+.btn.solid, .btn:hover {
+  color: #FFF;
+  background: #666;
+}
+/* line 32, assets/sass/vital/_buttons.sass */
+.btn.white {
+  color: #FFF;
+  border-color: #FFF;
+}
+/* line 35, assets/sass/vital/_buttons.sass */
+.btn.white.solid, .btn.white:hover {
+  color: #000;
+  background: #FFF;
+}
+/* line 38, assets/sass/vital/_buttons.sass */
+.btn.gray-light {
+  color: #BBB;
+  border-color: #BBB;
+}
+/* line 41, assets/sass/vital/_buttons.sass */
+.btn.gray-light.solid, .btn.gray-light:hover {
+  color: #666;
+  background: #BBB;
+}
+/* line 44, assets/sass/vital/_buttons.sass */
+.btn.gray-dark {
+  color: #333;
+  border-color: #333;
+}
+/* line 47, assets/sass/vital/_buttons.sass */
+.btn.gray-dark.solid, .btn.gray-dark:hover {
+  color: #FFF;
+  background: #333;
+}
+/* line 50, assets/sass/vital/_buttons.sass */
+.btn.black {
+  color: #000;
+  border-color: #000;
+}
+/* line 53, assets/sass/vital/_buttons.sass */
+.btn.black.solid, .btn.black:hover {
+  color: #FFF;
+  background: #000;
+}
+/* line 56, assets/sass/vital/_buttons.sass */
+.btn.red {
+  color: #C9282E;
+  border-color: #C9282E;
+}
+/* line 59, assets/sass/vital/_buttons.sass */
+.btn.red.solid, .btn.red:hover {
+  color: #FFF;
+  background: #C9282E;
+}
+/* line 62, assets/sass/vital/_buttons.sass */
+.btn.orange {
+  color: #E16E00;
+  border-color: #E16E00;
+}
+/* line 65, assets/sass/vital/_buttons.sass */
+.btn.orange.solid, .btn.orange:hover {
+  color: #FFF;
+  background: #E16E00;
+}
+/* line 68, assets/sass/vital/_buttons.sass */
+.btn.yellow {
+  color: #D5B778;
+  border-color: #D5B778;
+}
+/* line 71, assets/sass/vital/_buttons.sass */
+.btn.yellow.solid, .btn.yellow:hover {
+  color: #FFF;
+  background: #D5B778;
+}
+/* line 74, assets/sass/vital/_buttons.sass */
+.btn.blue {
+  color: #5A9FC8;
+  border-color: #5A9FC8;
+}
+/* line 77, assets/sass/vital/_buttons.sass */
+.btn.blue.solid, .btn.blue:hover {
+  color: #FFF;
+  background: #5A9FC8;
+}
+/* line 80, assets/sass/vital/_buttons.sass */
+.btn.green {
+  color: #6BAF56;
+  border-color: #6BAF56;
+}
+/* line 83, assets/sass/vital/_buttons.sass */
+.btn.green.solid, .btn.green:hover {
+  color: #FFF;
+  background: #6BAF56;
+}
+/* line 90, assets/sass/vital/_buttons.sass */
+.btn.solid:hover, .btn.solid:active {
+  opacity: 0.8;
+}
+/* line 95, assets/sass/vital/_buttons.sass */
+.btn.no-outline {
+  border-color: transparent;
+}
+/* line 100, assets/sass/vital/_buttons.sass */
+.btn.large {
+  font-size: 1.2em;
+  padding: 0.8em 1.7em;
+  word-wrap: normal;
+}
+/* line 104, assets/sass/vital/_buttons.sass */
+.btn.small {
+  padding: 0.5em 0.9em;
+  font-size: 0.9em;
+}
+/* line 107, assets/sass/vital/_buttons.sass */
+.btn.tiny {
+  padding: 0.3em 0.8em;
+  font-size: 0.8em;
+}
+/* line 113, assets/sass/vital/_buttons.sass */
+.btn.round {
+  border-radius: 99em;
+}
+/* line 118, assets/sass/vital/_buttons.sass */
+.btn:hover {
+  transition: all 200ms ease-in-out;
+  opacity: 0.8;
+}
+/* line 122, assets/sass/vital/_buttons.sass */
+.btn:disabled, .btn.disabled, .btn:disabled:hover, .btn.disabled:hover {
+  cursor: default;
+  background-color: #BBB !important;
+  border-color: #BBB !important;
+  color: #666 !important;
+  opacity: 0.2;
+}
+
+@-moz-document url-prefix() {
+  /* line 133, assets/sass/vital/_buttons.sass */
+  .btn {
+    padding: 0.78em 1.5em;
+  }
+}
+/* line 4, assets/sass/vital/_footer.sass */
+.footer {
+  color: #BBB;
+  padding: 3em 1em;
+  background: #FAFAFA;
+}
+/* line 8, assets/sass/vital/_footer.sass */
+.footer hr {
+  background: rgba(0, 0, 0, 0.1);
+}
+/* line 10, assets/sass/vital/_footer.sass */
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 14, assets/sass/vital/_footer.sass */
+.footer li {
+  display: inline;
+  padding: 0 0.5em;
+}
+/* line 17, assets/sass/vital/_footer.sass */
+.footer a {
+  color: #666;
+  display: inline-block;
+  line-height: 3;
+}
+/* line 21, assets/sass/vital/_footer.sass */
+.footer a:hover {
+  color: #FF0008;
+}
+
+@media screen and (max-width: 667px) {
+  /* line 27, assets/sass/vital/_footer.sass */
+  .footer li, .footer a {
+    display: block;
+  }
+  /* line 29, assets/sass/vital/_footer.sass */
+  .footer a {
+    padding: 1em;
+    line-height: 2;
+  }
+  /* line 32, assets/sass/vital/_footer.sass */
+  .footer .line {
+    display: none;
+  }
+}
+/* line 4, assets/sass/vital/_forms.sass */
+.full-width-forms .btn {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+/* line 14, assets/sass/vital/_forms.sass */
+.full-width-forms .btn:not([type='checkbox']):not([type='radio']),
+.full-width-forms a:not([type='checkbox']):not([type='radio']),
+.full-width-forms button:not([type='checkbox']):not([type='radio']),
+.full-width-forms submit:not([type='checkbox']):not([type='radio']),
+.full-width-forms select:not([type='checkbox']):not([type='radio']),
+.full-width-forms textarea:not([type='checkbox']):not([type='radio']),
+.full-width-forms input:not([type='checkbox']):not([type='radio']) {
+  width: 100%;
+}
+
+/* line 17, assets/sass/vital/_forms.sass */
+fieldset {
+  border-radius: 0.15em;
+  border: 1px solid #f5f5f5;
+  margin: 1em 0;
+}
+/* line 21, assets/sass/vital/_forms.sass */
+fieldset legend {
+  font-weight: 400;
+  padding: 0 0.25em;
+}
+
+/* line 25, assets/sass/vital/_forms.sass */
+input, select, textarea, button, .btn {
+  margin-bottom: 1px;
+}
+
+/* line 28, assets/sass/vital/_forms.sass */
+input, select, textarea {
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0.15em;
+  border: 1px solid #EEE;
+  background-color: #FFF;
+  box-shadow: none;
+  color: #444;
+  display: block;
+  font-size: inherit;
+  outline: none;
+  padding: 0.49em 0.5em;
+}
+/* line 39, assets/sass/vital/_forms.sass */
+input:hover, input:focus, select:hover, select:focus, textarea:hover, textarea:focus {
+  border-color: #666;
+  transition: all 200ms ease-in-out;
+  background-color: #F8F8F8;
+}
+/* line 43, assets/sass/vital/_forms.sass */
+input:focus, select:focus, textarea:focus {
+  border-color: #666;
+}
+
+/* line 46, assets/sass/vital/_forms.sass */
+textarea {
+  padding: 0.5em;
+}
+
+/* line 49, assets/sass/vital/_forms.sass */
+select {
+  background-size: 1em;
+  background-repeat: no-repeat;
+  background-position: 99% 50%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><path d="M11.4 20.8h26.8L24.8 0 11.4 20.8m26.8 8.4H11.4L24.8 50l13.4-20.8"/></svg>');
+  line-height: 1.1;
+  padding: 0.78em 0.5em;
+  padding-right: 1.4em;
+}
+
+/* line 57, assets/sass/vital/_forms.sass */
+input:not(.btn):not([type='checkbox']):not([type='radio']) {
+  min-height: 2.7em;
+}
+/* line 60, assets/sass/vital/_forms.sass */
+input[type='file'] {
+  background-color: #FFF;
+  width: 100%;
+  font-size: 12px;
+  padding: 1.02em 0.5em;
+}
+/* line 66, assets/sass/vital/_forms.sass */
+input[type='range'] {
+  padding: 0.87em 0.1em;
+}
+/* line 68, assets/sass/vital/_forms.sass */
+input[type='range']:focus {
+  outline: 0;
+}
+/* line 71, assets/sass/vital/_forms.sass */
+input[type='search'] {
+  box-sizing: border-box !important;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+/* line 75, assets/sass/vital/_forms.sass */
+input[type='checkbox'], input[type='radio'] {
+  background-color: #FFF;
+  border: 1px solid #888;
+  display: inline-block;
+  height: 1em;
+  margin: 0 0.3em -0.1em 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  width: 1em;
+  overflow: hidden;
+}
+/* line 86, assets/sass/vital/_forms.sass */
+input[type='checkbox']:checked, input[type='radio']:checked {
+  background-color: #C9282E;
+  border-color: #C9282E;
+}
+/* line 89, assets/sass/vital/_forms.sass */
+input[type='checkbox']:disabled, input[type='radio']:disabled {
+  opacity: 0.3;
+}
+/* line 92, assets/sass/vital/_forms.sass */
+input[type='checkbox'] {
+  border-radius: 0.15em;
+}
+/* line 94, assets/sass/vital/_forms.sass */
+input[type='checkbox']:checked {
+  background-size: 1em;
+  background-repeat: no-repeat;
+  background-position: 99% 50%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><style type="text/css">.st0{fill:#fff;}</style><path class="st0" d="M44.3 12.2l-2.5-2.6-24 24.3-9.1-9.1-2.5 2.5 10.4 10.4c.4.4.9.7 1.3.7.3 0 .8-.3 1.2-.7l25.2-25.5z"/></svg>');
+  border: none;
+}
+/* line 99, assets/sass/vital/_forms.sass */
+input[type='radio'] {
+  border-radius: 99em;
+}
+/* line 102, assets/sass/vital/_forms.sass */
+input[type='radio']:checked:before {
+  color: white;
+  content: " ";
+  height: 1em;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 1em;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* line 116, assets/sass/vital/_forms.sass */
+  input:not(.btn):not([type='checkbox']):not([type='radio']), select, textarea {
+    min-height: 2.7em;
+  }
+}
+@-moz-document url-prefix() {
+  /* line 124, assets/sass/vital/_forms.sass */
+  input[type='file'] {
+    padding: 1em 0.5em;
+  }
+
+  /* line 127, assets/sass/vital/_forms.sass */
+  select {
+    padding: 0.641em 0.5em;
+  }
+  /* line 129, assets/sass/vital/_forms.sass */
+  select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+    transition: none;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* line 138, assets/sass/vital/_forms.sass */
+  select {
+    padding: 0.65em 0.5em;
+    padding-right: 0.5em;
+  }
+
+  /* line 144, assets/sass/vital/_forms.sass */
+  input[type='file']::-ms-value {
+    background: #FFF;
+  }
+  /* line 146, assets/sass/vital/_forms.sass */
+  input[type='file']::-ms-value, input[type='file']::-ms-value {
+    box-shadow: none;
+    border: 0;
+  }
+  /* line 149, assets/sass/vital/_forms.sass */
+  input[type='range'] {
+    border-color: transparent;
+  }
+}
+/* line 5, assets/sass/vital/_heroes.sass */
+.hero {
+  color: #FFF;
+  background: #A8002D;
+  background: linear-gradient(to bottom right, #C9282E, #A60052);
+}
+/* line 10, assets/sass/vital/_heroes.sass */
+.hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6 {
+  margin: 0;
+  line-height: 1.3;
+}
+/* line 13, assets/sass/vital/_heroes.sass */
+.hero h1 {
+  font-size: 3em;
+}
+/* line 15, assets/sass/vital/_heroes.sass */
+.hero h2 {
+  font-size: 1.8em;
+}
+/* line 17, assets/sass/vital/_heroes.sass */
+.hero h3 {
+  font-size: 1.6em;
+}
+/* line 19, assets/sass/vital/_heroes.sass */
+.hero h4 {
+  font-size: 1.4em;
+}
+/* line 21, assets/sass/vital/_heroes.sass */
+.hero h5 {
+  font-size: 1.2em;
+}
+/* line 23, assets/sass/vital/_heroes.sass */
+.hero h6 {
+  font-size: 1em;
+}
+/* line 26, assets/sass/vital/_heroes.sass */
+.hero .section {
+  padding: 5em 1.5em;
+}
+
+@media screen and (max-width: 667px) {
+  /* line 32, assets/sass/vital/_heroes.sass */
+  .hero .section {
+    padding: 4em 1em;
+  }
+  /* line 34, assets/sass/vital/_heroes.sass */
+  .hero h1 {
+    font-size: 2.4em;
+  }
+}
+/* line 5, assets/sass/vital/_loaders.sass */
+.load {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: loading;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-duration: 1s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-name: loading;
+  -moz-animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: loading;
+  animation-timing-function: linear;
+  border-radius: 99em;
+  border: 3px solid #DDD;
+  border-left-color: #666;
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+}
+/* line 24, assets/sass/vital/_loaders.sass */
+.load.smallest {
+  width: 9px;
+  height: 9px;
+  border-width: 1px;
+}
+/* line 28, assets/sass/vital/_loaders.sass */
+.load.small {
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+}
+/* line 32, assets/sass/vital/_loaders.sass */
+.load.large {
+  width: 48px;
+  height: 48px;
+  border-width: 4px;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes loading {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+/* line 5, assets/sass/vital/_notice.sass */
+.notice {
+  background: #FFE0A3;
+  text-align: center;
+}
+/* line 8, assets/sass/vital/_notice.sass */
+.notice .section {
+  position: relative;
+  padding: 1em;
+}
+
+/* line 12, assets/sass/vital/_notice.sass */
+.notice-message {
+  display: table;
+  width: 100%;
+}
+
+/* line 16, assets/sass/vital/_notice.sass */
+.notice-text,
+.notice-dismiss {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 21, assets/sass/vital/_notice.sass */
+.notice-dismiss {
+  width: 3em;
+}
+/* line 23, assets/sass/vital/_notice.sass */
+.notice-dismiss img {
+  cursor: pointer;
+  width: 2em;
+  height: 2em;
+  float: right;
+}
+/* line 28, assets/sass/vital/_notice.sass */
+.notice-dismiss img:hover {
+  opacity: 0.7;
+}
+
+/* line 3, assets/sass/vital/_pagination.sass */
+.pagination {
+  margin: 1em 0;
+  padding: 1em;
+  text-align: center;
+}
+/* line 7, assets/sass/vital/_pagination.sass */
+.pagination a, .pagination .current, .pagination .next_page, .pagination .previous_page {
+  background: transparent;
+  border-radius: 99em;
+  border: 1px solid #BBB;
+  color: #666;
+  display: inline-block;
+  font-size: 1em;
+  margin: 0.5%;
+  min-height: 2.6em;
+  padding: 0.4em 1em;
+}
+/* line 17, assets/sass/vital/_pagination.sass */
+.pagination a.current, .pagination a:hover, .pagination .current.current, .pagination .current:hover, .pagination .next_page.current, .pagination .next_page:hover, .pagination .previous_page.current, .pagination .previous_page:hover {
+  background: #BBB;
+  color: #FFF;
+  transition: all 200ms ease-in-out;
+}
+/* line 21, assets/sass/vital/_pagination.sass */
+.pagination .next_page, .pagination .previous_page {
+  min-width: 9em;
+}
+
+@media screen and (max-width: 667px) {
+  /* line 27, assets/sass/vital/_pagination.sass */
+  .pagination a, .pagination .current, .pagination .gap {
+    margin: 0 1em 1em 0;
+  }
+  /* line 29, assets/sass/vital/_pagination.sass */
+  .pagination .next_page, .pagination .previous_page {
+    width: 9em;
+    display: block;
+    margin: 0 auto 1em auto;
+  }
+}
+/* line 5, assets/sass/vital/_tables.sass */
+table {
+  width: 100%;
+  margin: 1em 0;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+
+/* line 10, assets/sass/vital/_tables.sass */
+th {
+  font-weight: 400;
+  color: #000;
+  text-align: left;
+}
+
+/* line 14, assets/sass/vital/_tables.sass */
+td {
+  border-top: 1px solid #EEE;
+}
+
+/* line 17, assets/sass/vital/_tables.sass */
+td, th {
+  padding: 0.5em;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* line 22, assets/sass/vital/_tables.sass */
+tfoot tr {
+  border-bottom: 0;
+}
+
+@media screen and (max-width: 667px) {
+  /* line 27, assets/sass/vital/_tables.sass */
+  tr, td, th {
+    display: block;
+  }
+
+  /* line 29, assets/sass/vital/_tables.sass */
+  tr {
+    padding: 1em 0;
+    border-top: 1px solid #EEE;
+  }
+  /* line 32, assets/sass/vital/_tables.sass */
+  tr:first-child {
+    border-top: 0;
+  }
+
+  /* line 34, assets/sass/vital/_tables.sass */
+  thead {
+    display: none;
+  }
+
+  /* line 36, assets/sass/vital/_tables.sass */
+  td {
+    clear: both;
+    border: none;
+  }
+
+  /* line 39, assets/sass/vital/_tables.sass */
+  td, th {
+    padding: 0.25em 0;
+  }
+}
+/* line 5, assets/sass/vital/_tabs.sass */
+.tabs-block {
+  background: transparent;
+  border-bottom: 1px solid #EEE;
+}
+/* line 8, assets/sass/vital/_tabs.sass */
+.tabs-block .col {
+  text-align: center;
+  position: relative;
+}
+/* line 11, assets/sass/vital/_tabs.sass */
+.tabs-block .col:last-child {
+  border-right: 0;
+}
+/* line 13, assets/sass/vital/_tabs.sass */
+.tabs-block .col:hover, .tabs-block .col.here {
+  background: #EEE;
+  transition: all 200ms ease-in-out;
+}
+/* line 16, assets/sass/vital/_tabs.sass */
+.tabs-block a {
+  width: 100%;
+  display: inline-block;
+  padding: 0.5em;
+  color: #444;
+}
+
+/* line 22, assets/sass/vital/_tabs.sass */
+.tabs {
+  display: inline-block;
+  list-style: none;
+  margin: 1em 0;
+  padding: 0;
+  width: 100%;
+}
+/* line 28, assets/sass/vital/_tabs.sass */
+.tabs a {
+  border-radius: 0.15em;
+  border: 1px solid transparent;
+  padding: 0.65em 1em;
+  color: #444;
+}
+/* line 33, assets/sass/vital/_tabs.sass */
+.tabs li {
+  display: inline-block;
+  padding: 0 0.5%;
+}
+/* line 37, assets/sass/vital/_tabs.sass */
+.tabs li:hover a, .tabs li.here a {
+  transition: all 200ms ease-in-out;
+  background: #EEE;
+}
+/* line 40, assets/sass/vital/_tabs.sass */
+.tabs ul {
+  padding: 0;
+}
+/* line 43, assets/sass/vital/_tabs.sass */
+.tabs.round li a {
+  border-radius: 99em;
+}
+
+@media screen and (max-width: 860px) {
+  /* line 49, assets/sass/vital/_tabs.sass */
+  .tabs-block a, .tabs a {
+    margin: 0.5% 0;
+    padding: 0.65em 0.5em;
+    display: block;
+    text-align: center;
+  }
+
+  /* line 55, assets/sass/vital/_tabs.sass */
+  .tabs-block {
+    border-bottom: 0;
+  }
+
+  /* line 59, assets/sass/vital/_tabs.sass */
+  .tabs li {
+    display: block;
+    padding: 0;
+  }
+}
+/* line 6, assets/sass/vital/_syntax.sass */
+.highlight code {
+  width: 100%;
+}
+
+/* line 9, assets/sass/vital/_syntax.sass */
+.hll {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+/* line 15, assets/sass/vital/_syntax.sass */
+.c {
+  color: #999988;
+  font-style: italic;
+}
+
+/* line 19, assets/sass/vital/_syntax.sass */
+.err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+
+/* line 23, assets/sass/vital/_syntax.sass */
+.k, .o {
+  font-weight: bold;
+}
+
+/* line 26, assets/sass/vital/_syntax.sass */
+.cm {
+  color: #999988;
+  font-style: italic;
+}
+
+/* line 30, assets/sass/vital/_syntax.sass */
+.cp {
+  color: #999999;
+  font-weight: bold;
+}
+
+/* line 34, assets/sass/vital/_syntax.sass */
+.c1 {
+  color: #999988;
+  font-style: italic;
+}
+
+/* line 38, assets/sass/vital/_syntax.sass */
+.cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* line 43, assets/sass/vital/_syntax.sass */
+.gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+/* line 46, assets/sass/vital/_syntax.sass */
+.gd .x {
+  color: #000000;
+  background-color: #ffaaaa;
+}
+
+/* line 50, assets/sass/vital/_syntax.sass */
+.ge {
+  font-style: italic;
+}
+
+/* line 53, assets/sass/vital/_syntax.sass */
+.gr {
+  color: #aa0000;
+}
+
+/* line 56, assets/sass/vital/_syntax.sass */
+.gh {
+  color: #999999;
+}
+
+/* line 59, assets/sass/vital/_syntax.sass */
+.gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+/* line 62, assets/sass/vital/_syntax.sass */
+.gi .x {
+  color: #000000;
+  background-color: #aaffaa;
+}
+
+/* line 66, assets/sass/vital/_syntax.sass */
+.go {
+  color: #888888;
+}
+
+/* line 69, assets/sass/vital/_syntax.sass */
+.gp {
+  color: #555555;
+}
+
+/* line 72, assets/sass/vital/_syntax.sass */
+.gs {
+  font-weight: bold;
+}
+
+/* line 75, assets/sass/vital/_syntax.sass */
+.gu {
+  color: #800080;
+  font-weight: bold;
+}
+
+/* line 79, assets/sass/vital/_syntax.sass */
+.gt {
+  color: #aa0000;
+}
+
+/* line 82, assets/sass/vital/_syntax.sass */
+.kc, .kd, .kn, .kp, .kr {
+  font-weight: bold;
+}
+
+/* line 85, assets/sass/vital/_syntax.sass */
+.kt {
+  color: #445588;
+  font-weight: bold;
+}
+
+/* line 89, assets/sass/vital/_syntax.sass */
+.m {
+  color: #009999;
+}
+
+/* line 92, assets/sass/vital/_syntax.sass */
+.s {
+  color: #dd1144;
+}
+
+/* line 95, assets/sass/vital/_syntax.sass */
+.n {
+  color: #333333;
+}
+
+/* line 98, assets/sass/vital/_syntax.sass */
+.na {
+  color: teal;
+}
+
+/* line 101, assets/sass/vital/_syntax.sass */
+.nb {
+  color: #0086b3;
+}
+
+/* line 104, assets/sass/vital/_syntax.sass */
+.nc {
+  color: #445588;
+  font-weight: bold;
+}
+
+/* line 108, assets/sass/vital/_syntax.sass */
+.no {
+  color: teal;
+}
+
+/* line 111, assets/sass/vital/_syntax.sass */
+.ni {
+  color: purple;
+}
+
+/* line 114, assets/sass/vital/_syntax.sass */
+.ne, .nf {
+  color: #990000;
+  font-weight: bold;
+}
+
+/* line 118, assets/sass/vital/_syntax.sass */
+.nn {
+  color: #555555;
+}
+
+/* line 121, assets/sass/vital/_syntax.sass */
+.nt {
+  color: navy;
+}
+
+/* line 124, assets/sass/vital/_syntax.sass */
+.nv {
+  color: teal;
+}
+
+/* line 127, assets/sass/vital/_syntax.sass */
+.ow {
+  font-weight: bold;
+}
+
+/* line 130, assets/sass/vital/_syntax.sass */
+.w {
+  color: #bbbbbb;
+}
+
+/* line 133, assets/sass/vital/_syntax.sass */
+.mf, .mh, .mi, .mo {
+  color: #009999;
+}
+
+/* line 136, assets/sass/vital/_syntax.sass */
+.sb, .sc, .sd, .s2, .se, .sh, .si, .sx {
+  color: #dd1144;
+}
+
+/* line 139, assets/sass/vital/_syntax.sass */
+.sr {
+  color: #009926;
+}
+
+/* line 142, assets/sass/vital/_syntax.sass */
+.s1 {
+  color: #dd1144;
+}
+
+/* line 145, assets/sass/vital/_syntax.sass */
+.ss {
+  color: #990073;
+}
+
+/* line 148, assets/sass/vital/_syntax.sass */
+.bp {
+  color: #999999;
+}
+
+/* line 151, assets/sass/vital/_syntax.sass */
+.vc, .vg, .vi {
+  color: teal;
+}
+
+/* line 154, assets/sass/vital/_syntax.sass */
+.il {
+  color: #009999;
+}
+
+/* line 157, assets/sass/vital/_syntax.sass */
+.gc {
+  color: #999;
+  background-color: #EAF2F5;
+}
+
+/* line 11, assets/sass/vital/_helpers.sass */
+ul.list, ol.list {
+  padding-left: 1em;
+}
+/* line 13, assets/sass/vital/_helpers.sass */
+ul.list li, ol.list li {
+  padding-bottom: 0.5em;
+}
+
+/* line 16, assets/sass/vital/_helpers.sass */
+ul.list li {
+  list-style: disc;
+}
+/* line 18, assets/sass/vital/_helpers.sass */
+ul.list ul {
+  margin-top: 0;
+}
+/* line 20, assets/sass/vital/_helpers.sass */
+ul.list ul li {
+  list-style: circle;
+}
+
+/* line 23, assets/sass/vital/_helpers.sass */
+ol.list li {
+  list-style: decimal;
+}
+/* line 25, assets/sass/vital/_helpers.sass */
+ol.list ul {
+  margin-bottom: 0;
+}
+/* line 27, assets/sass/vital/_helpers.sass */
+ol.list ul li {
+  list-style: circle;
+}
+
+/* line 30, assets/sass/vital/_helpers.sass */
+.align-left {
+  text-align: left;
+}
+
+/* line 32, assets/sass/vital/_helpers.sass */
+.align-right {
+  text-align: right;
+}
+
+/* line 34, assets/sass/vital/_helpers.sass */
+.break-word {
+  word-break: break-all;
+}
+
+/* line 36, assets/sass/vital/_helpers.sass */
+.thin {
+  font-weight: 100;
+}
+
+/* line 38, assets/sass/vital/_helpers.sass */
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* line 43, assets/sass/vital/_helpers.sass */
+.no-wrap {
+  white-space: nowrap;
+}
+
+/* line 45, assets/sass/vital/_helpers.sass */
+.no-text-margins * {
+  margin: 0;
+}
+
+/* line 47, assets/sass/vital/_helpers.sass */
+.no-margin-top {
+  margin-top: 0;
+}
+
+/* line 49, assets/sass/vital/_helpers.sass */
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+/* line 53, assets/sass/vital/_helpers.sass */
+.no-first-last *:first-child {
+  margin-top: 0;
+}
+/* line 55, assets/sass/vital/_helpers.sass */
+.no-first-last *:last-child {
+  margin-bottom: 0;
+}
+
+/* line 61, assets/sass/vital/_helpers.sass */
+.light-text *, .light-text a {
+  color: white;
+}
+/* line 63, assets/sass/vital/_helpers.sass */
+.light-text a:hover {
+  text-decoration: underline;
+}
+
+/* line 68, assets/sass/vital/_helpers.sass */
+.narrow {
+  max-width: 34em;
+  margin: 0 auto;
+}
+
+/* line 71, assets/sass/vital/_helpers.sass */
+.narrow-large {
+  max-width: 40em;
+  margin: 0 auto;
+}
+
+/* line 74, assets/sass/vital/_helpers.sass */
+.narrow-small {
+  max-width: 20em;
+  margin: 0 auto;
+}
+
+/* line 80, assets/sass/vital/_helpers.sass */
+.auto {
+  margin: 0 auto;
+}
+
+/* line 82, assets/sass/vital/_helpers.sass */
+.block {
+  display: block;
+}
+
+/* line 84, assets/sass/vital/_helpers.sass */
+.center {
+  text-align: center;
+}
+
+/* line 86, assets/sass/vital/_helpers.sass */
+.clear {
+  clear: both;
+}
+
+/* line 88, assets/sass/vital/_helpers.sass */
+.float-left {
+  float: left;
+}
+
+/* line 90, assets/sass/vital/_helpers.sass */
+.float-right {
+  float: right;
+}
+
+/* line 92, assets/sass/vital/_helpers.sass */
+.inline {
+  display: inline;
+}
+
+/* line 94, assets/sass/vital/_helpers.sass */
+.inline-block {
+  display: inline-block;
+}
+
+/* line 96, assets/sass/vital/_helpers.sass */
+.padding {
+  padding: 1em;
+}
+
+/* line 101, assets/sass/vital/_helpers.sass */
+.checkbox, .radio {
+  display: block;
+  line-height: 2.2;
+}
+
+/* line 107, assets/sass/vital/_helpers.sass */
+.box {
+  border-radius: 0.15em;
+  border: 1px solid #ddd;
+  margin: 1em 0;
+  padding: 1em;
+}
+
+/* line 112, assets/sass/vital/_helpers.sass */
+.disabled {
+  color: #BBB;
+}
+
+/* line 114, assets/sass/vital/_helpers.sass */
+.radius {
+  border-radius: 0.15em;
+}
+
+/* line 116, assets/sass/vital/_helpers.sass */
+.round {
+  border-radius: 99em;
+}
+
+/* line 121, assets/sass/vital/_helpers.sass */
+.gray {
+  color: #666;
+}
+
+/* line 123, assets/sass/vital/_helpers.sass */
+.gray-medium {
+  color: #999;
+}
+
+/* line 125, assets/sass/vital/_helpers.sass */
+.gray-light {
+  color: #BBB;
+}
+
+/* line 127, assets/sass/vital/_helpers.sass */
+.gray-lighter {
+  color: #EEE;
+}
+
+/* line 129, assets/sass/vital/_helpers.sass */
+.gray-lightest {
+  color: #F9F9F9;
+}
+
+/* line 134, assets/sass/vital/_helpers.sass */
+.bg {
+  background: #F9F9F9;
+}
+
+/* line 136, assets/sass/vital/_helpers.sass */
+.bg-white {
+  background: #FFF;
+}
+
+/* line 138, assets/sass/vital/_helpers.sass */
+.bg-default {
+  background: #4B99CB;
+  background: linear-gradient(to bottom right, #4B99CB, #91E1B9);
+}
+
+/* line 141, assets/sass/vital/_helpers.sass */
+.bg-black {
+  background: #252525;
+  background: linear-gradient(to bottom right, #222, #333);
+}
+
+/* line 144, assets/sass/vital/_helpers.sass */
+.bg-gray {
+  background: #9A9A9A;
+  background: linear-gradient(to bottom right, #888, #CCC);
+}
+
+/* line 147, assets/sass/vital/_helpers.sass */
+.bg-blue {
+  background: #1C6AB9;
+  background: linear-gradient(to bottom right, #25639A, #1F9CEA);
+}
+
+/* line 150, assets/sass/vital/_helpers.sass */
+.bg-red {
+  background: #A8002D;
+  background: linear-gradient(to bottom right, #C9282E, #A60052);
+}
+
+/* line 153, assets/sass/vital/_helpers.sass */
+.bg-orange {
+  background: #EE495C;
+  background: linear-gradient(to bottom right, #EE495C, #F09259);
+}
+
+/* line 156, assets/sass/vital/_helpers.sass */
+.bg-green {
+  background: #52BB5C;
+  background: linear-gradient(to bottom right, #73B558, #45D093);
+}
+
+/* line 162, assets/sass/vital/_helpers.sass */
+.opacity-1 {
+  opacity: 0.1;
+}
+
+/* line 164, assets/sass/vital/_helpers.sass */
+.opacity-2 {
+  opacity: 0.2;
+}
+
+/* line 166, assets/sass/vital/_helpers.sass */
+.opacity-3 {
+  opacity: 0.3;
+}
+
+/* line 168, assets/sass/vital/_helpers.sass */
+.opacity-4 {
+  opacity: 0.4;
+}
+
+/* line 170, assets/sass/vital/_helpers.sass */
+.opacity-5 {
+  opacity: 0.5;
+}
+
+/* line 172, assets/sass/vital/_helpers.sass */
+.opacity-6 {
+  opacity: 0.6;
+}
+
+/* line 174, assets/sass/vital/_helpers.sass */
+.opacity-7 {
+  opacity: 0.7;
+}
+
+/* line 176, assets/sass/vital/_helpers.sass */
+.opacity-8 {
+  opacity: 0.8;
+}
+
+/* line 178, assets/sass/vital/_helpers.sass */
+.opacity-9 {
+  opacity: 0.9;
+}
+
+/* line 180, assets/sass/vital/_helpers.sass */
+.opaque {
+  opacity: 1;
+}
+
+/* line 185, assets/sass/vital/_helpers.sass */
+.hide {
+  display: none;
+}
+
+/* line 188, assets/sass/vital/_helpers.sass */
+.show {
+  display: block;
+}
+
+/* line 193, assets/sass/vital/_helpers.sass */
+.full {
+  width: 100%;
+}
+
+/* line 199, assets/sass/vital/_helpers.sass */
+.space:after {
+  content: " ";
+}
+
+/* line 204, assets/sass/vital/_helpers.sass */
+.x2 {
+  font-size: 2em;
+}
+
+/* line 206, assets/sass/vital/_helpers.sass */
+.x3 {
+  font-size: 3em;
+}
+
+/* line 208, assets/sass/vital/_helpers.sass */
+.x4 {
+  font-size: 4em;
+}
+
+/* line 210, assets/sass/vital/_helpers.sass */
+.x5 {
+  font-size: 5em;
+}
+
+/* line 213, assets/sass/vital/_helpers.sass */
+.same-width {
+  text-align: center;
+  width: 2em;
+  display: inline-block;
+}
+
+/* line 220, assets/sass/vital/_helpers.sass */
+img {
+  height: auto;
+}
+/* line 222, assets/sass/vital/_helpers.sass */
+img.smallest {
+  width: 1em;
+}
+/* line 224, assets/sass/vital/_helpers.sass */
+img.smaller {
+  width: 2em;
+}
+/* line 226, assets/sass/vital/_helpers.sass */
+img.small {
+  width: 3em;
+}
+/* line 228, assets/sass/vital/_helpers.sass */
+img.medium {
+  width: 4em;
+}
+/* line 230, assets/sass/vital/_helpers.sass */
+img.large {
+  width: 5em;
+}
+/* line 232, assets/sass/vital/_helpers.sass */
+img.larger {
+  width: 6em;
+}
+/* line 234, assets/sass/vital/_helpers.sass */
+img.largest {
+  width: 7em;
+}
+
+/* line 240, assets/sass/vital/_helpers.sass */
+.padded [class*='col-'], .padded .col {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+/* line 245, assets/sass/vital/_helpers.sass */
+.right-padded [class*='col-'], .right-padded .col {
+  padding-right: 2%;
+}
+
+@media screen and (max-width: 860px) {
+  /* line 251, assets/sass/vital/_helpers.sass */
+  .right-padded [class*='col-'], .right-padded .col {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 667px) {
+  /* line 258, assets/sass/vital/_helpers.sass */
+  .space, .hide-on-mobile {
+    display: none;
+  }
+
+  /* line 261, assets/sass/vital/_helpers.sass */
+  .responsive {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 334px) {
+  /* line 266, assets/sass/vital/_helpers.sass */
+  .responsive-portrait {
+    width: 100%;
+  }
+}
+/* line 3, assets/sass/vital/layouts/_background_cards.sass */
+.boxed-image,
+.boxed-action,
+.boxed-meta {
+  position: absolute;
+}
+
+/* line 7, assets/sass/vital/layouts/_background_cards.sass */
+.boxed-image,
+.boxed-action {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* line 13, assets/sass/vital/layouts/_background_cards.sass */
+.boxed-image {
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* line 15, assets/sass/vital/layouts/_background_cards.sass */
+.boxed-meta {
+  bottom: 0;
+  z-index: 1;
+}
+
+/* line 18, assets/sass/vital/layouts/_background_cards.sass */
+.boxed-action {
+  opacity: 0;
+  padding: 20% 0 0;
+  z-index: 2;
+}
+
+/* line 22, assets/sass/vital/layouts/_background_cards.sass */
+.boxed {
+  padding-top: 80%;
+  position: relative;
+  text-align: center;
+}
+/* line 27, assets/sass/vital/layouts/_background_cards.sass */
+.boxed:hover .boxed-action {
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+
+@media screen and (max-width: 1080px) {
+  /* line 35, assets/sass/vital/layouts/_background_cards.sass */
+  .boxed-backgrounds [class*='col-'] {
+    width: 50%;
+  }
+  /* line 37, assets/sass/vital/layouts/_background_cards.sass */
+  .boxed-backgrounds .clear {
+    display: none;
+  }
+}
+@media screen and (max-width: 667px) {
+  /* line 43, assets/sass/vital/layouts/_background_cards.sass */
+  .boxed-backgrounds [class*='col-'] {
+    width: 100%;
+  }
+}
+/* line 3, assets/sass/vital/layouts/_photo_collages.sass */
+.boxed-text {
+  position: relative;
+}
+/* line 5, assets/sass/vital/layouts/_photo_collages.sass */
+.boxed-text [class*='bg-'] {
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* line 7, assets/sass/vital/layouts/_photo_collages.sass */
+.boxed-text .boxed-text-outer {
+  position: relative;
+  top: 0;
+  padding-bottom: 30%;
+}
+/* line 11, assets/sass/vital/layouts/_photo_collages.sass */
+.boxed-text .boxed-text-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1em;
+  color: #FFF;
+}
+/* line 19, assets/sass/vital/layouts/_photo_collages.sass */
+.boxed-text .boxed-text-content * {
+  margin: 0;
+}
+/* line 21, assets/sass/vital/layouts/_photo_collages.sass */
+.boxed-text .boxed-text-content:after {
+  content: "";
+}
+/* line 23, assets/sass/vital/layouts/_photo_collages.sass */
+.boxed-text .boxed-text-content:hover {
+  background: rgba(0, 0, 0, 0.3);
+  transition: all 200ms ease-in-out;
+}
+
+@media screen and (max-width: 667px) {
+  /* line 30, assets/sass/vital/layouts/_photo_collages.sass */
+  .boxed-text .filler {
+    padding-bottom: 80%;
+  }
+}
+/* line 3, assets/sass/vital/layouts/_feed_cards.sass */
+.feed-card {
+  background: #FFF;
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.05);
+  padding: 1em;
+  margin: 0.3em;
+}
+/* line 8, assets/sass/vital/layouts/_feed_cards.sass */
+.feed-card img {
+  border-radius: 0;
+  height: auto;
+  width: 100%;
+}
+/* line 12, assets/sass/vital/layouts/_feed_cards.sass */
+.feed-card * {
+  margin: 0.2em 0;
+}
+
+/* line 3, assets/sass/vital/layouts/_bordered_lists.sass */
+.bordered-list {
+  margin: 0;
+}
+/* line 5, assets/sass/vital/layouts/_bordered_lists.sass */
+.bordered-list a {
+  display: block;
+  padding: 1em;
+}
+/* line 8, assets/sass/vital/layouts/_bordered_lists.sass */
+.bordered-list li {
+  border-top: 1px solid #eee;
+}
+/* line 10, assets/sass/vital/layouts/_bordered_lists.sass */
+.bordered-list li:first-child {
+  border-top: 0;
+}
+/* line 12, assets/sass/vital/layouts/_bordered_lists.sass */
+.bordered-list .here {
+  background: #fff;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+/* line 1, assets/sass/typography/_typography.scss */
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  color: #404040;
+  font-family: "Poppins", Helvetica, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* line 1, assets/sass/typography/_headings.scss */
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  font-family: "Poppins", Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+/* line 1, assets/sass/typography/_copy.scss */
+p {
+  margin-bottom: 1.5em;
+}
+
+/* line 5, assets/sass/typography/_copy.scss */
+dfn, cite, em, i {
+  font-style: italic;
+}
+
+/* line 9, assets/sass/typography/_copy.scss */
+blockquote {
+  margin: 0 1.5em;
+}
+
+/* line 13, assets/sass/typography/_copy.scss */
+address {
+  margin: 0 0 1.5em;
+}
+
+/* line 17, assets/sass/typography/_copy.scss */
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+/* line 28, assets/sass/typography/_copy.scss */
+code, kbd, tt, var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+}
+
+/* line 33, assets/sass/typography/_copy.scss */
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+/* line 38, assets/sass/typography/_copy.scss */
+mark, ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+/* line 43, assets/sass/typography/_copy.scss */
+big {
+  font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/* line 1, assets/sass/elements/_elements.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 5, assets/sass/elements/_elements.scss */
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit;
+}
+
+/* line 11, assets/sass/elements/_elements.scss */
+body {
+  background: #fff;
+  /* Fallback for when there is no custom background color defined. */
+}
+
+/* line 15, assets/sass/elements/_elements.scss */
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+
+/* line 1, assets/sass/elements/_lists.scss */
+ul, ol {
+  margin: 0 0 1.5em 3em;
+}
+
+/* line 5, assets/sass/elements/_lists.scss */
+ul {
+  list-style: disc;
+}
+
+/* line 9, assets/sass/elements/_lists.scss */
+ol {
+  list-style: decimal;
+}
+
+/* line 13, assets/sass/elements/_lists.scss */
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+
+/* line 19, assets/sass/elements/_lists.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 23, assets/sass/elements/_lists.scss */
+dd {
+  margin: 0 1.5em 1.5em;
+}
+
+/* line 24, assets/sass/elements/_elements.scss */
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+}
+
+/* line 29, assets/sass/elements/_elements.scss */
+figure {
+  margin: 1em 0;
+  /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+/* line 1, assets/sass/elements/_tables.scss */
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+/* line 1, assets/sass/forms/_buttons.scss */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 1px solid;
+  border-color: #ccc #ccc #bbb;
+  border-radius: 3px;
+  background: #e6e6e6;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: .6em 1em .4em;
+}
+/* line 14, assets/sass/forms/_buttons.scss */
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  border-color: #ccc #bbb #aaa;
+}
+/* line 18, assets/sass/forms/_buttons.scss */
+button:active, button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+  border-color: #aaa #bbb #bbb;
+}
+
+/* line 1, assets/sass/forms/_fields.scss */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 3px;
+}
+/* line 22, assets/sass/forms/_fields.scss */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  color: #111;
+}
+
+/* line 27, assets/sass/forms/_fields.scss */
+select {
+  border: 1px solid #ccc;
+}
+
+/* line 31, assets/sass/forms/_fields.scss */
+textarea {
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+/* line 1, assets/sass/navigation/_links.scss */
+a {
+  color: royalblue;
+}
+/* line 4, assets/sass/navigation/_links.scss */
+a:visited {
+  color: purple;
+}
+/* line 7, assets/sass/navigation/_links.scss */
+a:hover, a:focus, a:active {
+  color: midnightblue;
+}
+/* line 12, assets/sass/navigation/_links.scss */
+a:focus {
+  outline: thin dotted;
+}
+/* line 15, assets/sass/navigation/_links.scss */
+a:hover, a:active {
+  outline: 0;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+/* Luxbar */
+/* line 3, assets/sass/navigation/_menus.scss */
+.luxbar-fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* line 12, assets/sass/navigation/_menus.scss */
+.luxbar-hamburger span {
+  display: block;
+  height: 2px;
+  width: 26px;
+  transition: 0.6s ease;
+}
+/* line 17, assets/sass/navigation/_menus.scss */
+.luxbar-hamburger span::before, .luxbar-hamburger span::after {
+  display: block;
+  height: 2px;
+  width: 26px;
+  transition: 0.6s ease;
+}
+
+/* line 25, assets/sass/navigation/_menus.scss */
+.luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span {
+  background-color: transparent;
+}
+/* line 27, assets/sass/navigation/_menus.scss */
+.luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span::before, .luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span::after {
+  margin-top: 0;
+}
+
+/* line 32, assets/sass/navigation/_menus.scss */
+.luxbar-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 68px;
+}
+
+/* line 41, assets/sass/navigation/_menus.scss */
+.luxbar-menu-left .luxbar-navigation, .luxbar-menu-left .luxbar-header {
+  justify-content: flex-start;
+}
+
+/* line 46, assets/sass/navigation/_menus.scss */
+.luxbar-menu-right .luxbar-hamburger {
+  margin-left: auto;
+}
+
+/* line 50, assets/sass/navigation/_menus.scss */
+.luxbar-brand {
+  height: 68px;
+  margin-left: 10px;
+  max-width: 90px;
+  width: auto;
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+/* line 61, assets/sass/navigation/_menus.scss */
+.luxbar-menu {
+  min-height: 68px;
+  transition: 0.6s ease;
+  width: 100%;
+}
+
+/* line 67, assets/sass/navigation/_menus.scss */
+.luxbar-navigation {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* line 75, assets/sass/navigation/_menus.scss */
+.luxbar-menu a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* line 81, assets/sass/navigation/_menus.scss */
+.luxbar-hamburger {
+  padding: 18px 24px 18px 24px;
+  position: relative;
+  cursor: pointer;
+}
+/* line 86, assets/sass/navigation/_menus.scss */
+.luxbar-hamburger span::before, .luxbar-hamburger span::after {
+  content: '';
+  position: absolute;
+}
+/* line 90, assets/sass/navigation/_menus.scss */
+.luxbar-hamburger span::before {
+  margin-top: -8px;
+}
+/* line 93, assets/sass/navigation/_menus.scss */
+.luxbar-hamburger span::after {
+  margin-top: 8px;
+}
+
+/* line 99, assets/sass/navigation/_menus.scss */
+.luxbar-checkbox {
+  display: none;
+}
+/* line 101, assets/sass/navigation/_menus.scss */
+.luxbar-checkbox:not(:checked) ~ .luxbar-menu {
+  overflow: hidden;
+  height: 68px;
+}
+/* line 105, assets/sass/navigation/_menus.scss */
+.luxbar-checkbox:checked ~ .luxbar-menu {
+  transition: height 0.6s ease;
+  height: 100vh;
+  overflow: auto;
+}
+
+/* line 112, assets/sass/navigation/_menus.scss */
+.menu-item-has-children {
+  position: relative;
+  height: auto;
+  min-height: 68px;
+}
+/* line 116, assets/sass/navigation/_menus.scss */
+.menu-item-has-children:hover > ul {
+  position: relative;
+  display: block;
+  min-width: 200px;
+}
+/* line 122, assets/sass/navigation/_menus.scss */
+.menu-item-has-children > a::after {
+  position: absolute;
+  content: '';
+  right: 10px;
+  top: 25px;
+  border-width: 5px 5px 0;
+  border-color: transparent;
+  border-style: solid;
+}
+/* line 131, assets/sass/navigation/_menus.scss */
+.menu-item-has-children > ul {
+  display: block;
+  overflow-x: hidden;
+  list-style: none;
+  padding: 0;
+}
+/* line 136, assets/sass/navigation/_menus.scss */
+.menu-item-has-children > ul .luxbar-item {
+  min-width: 100%;
+  height: 29px;
+  padding: 5px 10px 5px 40px;
+}
+/* line 140, assets/sass/navigation/_menus.scss */
+.menu-item-has-children > ul .luxbar-item a {
+  min-height: 29px;
+  line-height: 29px;
+  padding: 0;
+}
+
+@media screen and (min-width: 860px) {
+  /* line 151, assets/sass/navigation/_menus.scss */
+  .luxbar-navigation {
+    flex-flow: row;
+    justify-content: flex-end;
+  }
+  /* line 154, assets/sass/navigation/_menus.scss */
+  .luxbar-navigation li {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+
+  /* line 160, assets/sass/navigation/_menus.scss */
+  .luxbar-hamburger {
+    display: none;
+  }
+
+  /* line 164, assets/sass/navigation/_menus.scss */
+  .luxbar-checkbox:not(:checked) ~ .luxbar-menu {
+    overflow: visible;
+  }
+  /* line 167, assets/sass/navigation/_menus.scss */
+  .luxbar-checkbox:checked ~ .luxbar-menu {
+    height: 68px;
+  }
+
+  /* line 171, assets/sass/navigation/_menus.scss */
+  .luxbar-menu .luxbar-item {
+    border-top: 0;
+  }
+
+  /* line 174, assets/sass/navigation/_menus.scss */
+  .luxbar-menu-right .luxbar-header {
+    margin-right: auto;
+  }
+
+  /* line 177, assets/sass/navigation/_menus.scss */
+  .menu-item-has-children {
+    height: 68px;
+  }
+  /* line 179, assets/sass/navigation/_menus.scss */
+  .menu-item-has-children:hover > ul {
+    position: absolute;
+    left: 0;
+    top: 68px;
+    padding: 0;
+  }
+  /* line 185, assets/sass/navigation/_menus.scss */
+  .menu-item-has-children > ul {
+    display: none;
+  }
+  /* line 187, assets/sass/navigation/_menus.scss */
+  .menu-item-has-children > ul .luxbar-item {
+    padding: 5px 10px;
+  }
+  /* line 189, assets/sass/navigation/_menus.scss */
+  .menu-item-has-children > ul .luxbar-item a {
+    white-space: nowrap;
+  }
+}
+/* line 199, assets/sass/navigation/_menus.scss */
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-doublespin span::before {
+  transform: rotate(225deg);
+}
+/* line 202, assets/sass/navigation/_menus.scss */
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-doublespin span::after {
+  transform: rotate(-225deg);
+}
+/* line 207, assets/sass/navigation/_menus.scss */
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-spin span::before {
+  transform: rotate(45deg);
+}
+/* line 210, assets/sass/navigation/_menus.scss */
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-spin span::after {
+  transform: rotate(-45deg);
+}
+
+/* line 216, assets/sass/navigation/_menus.scss */
+.luxbar-menu-light {
+  background-color: #fff;
+  color: #333;
+}
+/* line 219, assets/sass/navigation/_menus.scss */
+.luxbar-menu-light .menu-item-has-children ul {
+  background-color: #fff;
+  color: #333;
+}
+/* line 223, assets/sass/navigation/_menus.scss */
+.luxbar-menu-light .active, .luxbar-menu-light .luxbar-item:hover {
+  background-color: #bdbdbd;
+}
+/* line 226, assets/sass/navigation/_menus.scss */
+.luxbar-menu-light .luxbar-hamburger span {
+  background-color: #212121;
+}
+/* line 228, assets/sass/navigation/_menus.scss */
+.luxbar-menu-light .luxbar-hamburger span::before, .luxbar-menu-light .luxbar-hamburger span::after {
+  background-color: #212121;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+/* line 2, assets/sass/modules/_accessibility.scss */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+/* line 14, assets/sass/modules/_accessibility.scss */
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+/* line 36, assets/sass/modules/_accessibility.scss */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+/* line 1, assets/sass/modules/_alignments.scss */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+/* line 7, assets/sass/modules/_alignments.scss */
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+/* line 13, assets/sass/modules/_alignments.scss */
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+/* line 1, assets/sass/modules/_clearings.scss */
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+
+/* line 16, assets/sass/modules/_clearings.scss */
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+  clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+/* line 1, assets/sass/site/secondary/_widgets.scss */
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets. */
+}
+/* line 5, assets/sass/site/secondary/_widgets.scss */
+.widget select {
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+/* line 1, assets/sass/site/primary/_posts-and-pages.scss */
+.sticky {
+  display: block;
+}
+
+/* line 5, assets/sass/site/primary/_posts-and-pages.scss */
+.hentry {
+  margin: 0 0 1.5em;
+}
+
+/* line 9, assets/sass/site/primary/_posts-and-pages.scss */
+.updated:not(.published) {
+  display: none;
+}
+
+/* line 13, assets/sass/site/primary/_posts-and-pages.scss */
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0;
+}
+
+/* line 19, assets/sass/site/primary/_posts-and-pages.scss */
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+/* line 1, assets/sass/site/primary/_comments.scss */
+.comment-content a {
+  word-wrap: break-word;
+}
+
+/* line 4, assets/sass/site/primary/_comments.scss */
+.bypostauthor {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+/* line 2, assets/sass/modules/_infinite-scroll.scss */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+/* line 8, assets/sass/modules/_infinite-scroll.scss */
+.infinity-end.neverending .site-footer {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+/* line 1, assets/sass/media/_media.scss */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+/* line 11, assets/sass/media/_media.scss */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+/* line 18, assets/sass/media/_media.scss */
+.custom-logo-link {
+  display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+/* line 1, assets/sass/media/_captions.scss */
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+/* line 5, assets/sass/media/_captions.scss */
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 9, assets/sass/media/_captions.scss */
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+/* line 14, assets/sass/media/_captions.scss */
+.wp-caption-text {
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+/* line 1, assets/sass/media/_galleries.scss */
+.gallery {
+  margin-bottom: 1.5em;
+}
+
+/* line 5, assets/sass/media/_galleries.scss */
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+/* line 13, assets/sass/media/_galleries.scss */
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+}
+/* line 13, assets/sass/media/_galleries.scss */
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33%;
+}
+/* line 13, assets/sass/media/_galleries.scss */
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+}
+/* line 13, assets/sass/media/_galleries.scss */
+.gallery-columns-5 .gallery-item {
+  max-width: 20%;
+}
+/* line 13, assets/sass/media/_galleries.scss */
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%;
+}
+/* line 13, assets/sass/media/_galleries.scss */
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%;
+}
+/* line 13, assets/sass/media/_galleries.scss */
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%;
+}
+/* line 13, assets/sass/media/_galleries.scss */
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%;
+}
+
+/* line 19, assets/sass/media/_galleries.scss */
+.gallery-caption {
+  display: block;
+}
