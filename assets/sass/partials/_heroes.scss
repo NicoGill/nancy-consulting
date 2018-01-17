@@ -1,8 +1,7 @@
 .hero {
-  @include background-size(cover);
-  min-height: 200px;
   position: relative;
   background: linear-gradient(to bottom right, $color__brand-second, $color__brand-main);
+  @include background-size(cover);
   h1 {
     color: $white;
     font-size: 30px;

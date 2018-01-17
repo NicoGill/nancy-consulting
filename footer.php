@@ -14,14 +14,13 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'ncv2' ), 'ncv2', '<a rel="designer" target=_"blank" href="https://nicolas-gillium.fr/">Nicolas Gillium</a>' );
-			?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+		<div class="section">
+			<div class="site-info center">
+				© 2018 Nancy Consulting • <a href="<?php echo esc_url( get_page_link(54) ); ?>" title="Visualiser les mentions légales du site"><?php echo esc_html_e('Mentions légales','ncv2'); ?></a>
+			</div>
+		</div>
+	</footer>
+</div>
 
 <?php wp_footer(); ?>
 

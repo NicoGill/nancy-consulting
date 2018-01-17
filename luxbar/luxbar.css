@@ -1,0 +1,447 @@
+/* line 1, ../assets/sass/luxbar/modes/_default.scss */
+.luxbar-default {
+  width: 100%;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* line 1, ../assets/sass/luxbar/modes/_static.scss */
+.luxbar-static {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 9, ../assets/sass/luxbar/modes/_static.scss */
+.luxbar-static .luxbar-checkbox:checked ~ .luxbar-menu {
+  position: absolute;
+}
+
+/* line 1, ../assets/sass/luxbar/modes/_fixed.scss */
+.luxbar-fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* line 1, ../assets/sass/luxbar/modes/_fixed-bottom.scss */
+.luxbar-fixed-bottom {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* line 3, ../assets/sass/luxbar/_mobile.scss */
+.luxbar-hamburger span, .luxbar-hamburger span::before, .luxbar-hamburger span::after {
+  display: block;
+  height: 2px;
+  width: 26px;
+  transition: 0.6s ease;
+}
+
+/* line 11, ../assets/sass/luxbar/_mobile.scss */
+.luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span {
+  background-color: transparent;
+}
+/* line 14, ../assets/sass/luxbar/_mobile.scss */
+.luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span::before, .luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span::after {
+  margin-top: 0;
+}
+
+/* line 21, ../assets/sass/luxbar/_mobile.scss */
+.luxbar-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 58px;
+}
+
+/* line 30, ../assets/sass/luxbar/_mobile.scss */
+.luxbar-menu-left .luxbar-navigation, .luxbar-menu-left .luxbar-header {
+  justify-content: flex-start;
+}
+
+/* line 36, ../assets/sass/luxbar/_mobile.scss */
+.luxbar-menu-right .luxbar-hamburger {
+  margin-left: auto;
+}
+
+/* line 41, ../assets/sass/luxbar/_mobile.scss */
+.luxbar-brand {
+  font-size: 1.6em;
+  padding: 18px 24px 18px 24px;
+}
+
+/* line 46, ../assets/sass/luxbar/_mobile.scss */
+.luxbar-menu {
+  min-height: 58px;
+  transition: 0.6s ease;
+  width: 100%;
+}
+
+/* line 52, ../assets/sass/luxbar/_mobile.scss */
+.luxbar-navigation {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* line 62, ../assets/sass/luxbar/_mobile.scss */
+.luxbar-menu a,
+.luxbar-item a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* line 69, ../assets/sass/luxbar/_mobile.scss */
+.luxbar-item {
+  height: 58px;
+}
+/* line 72, ../assets/sass/luxbar/_mobile.scss */
+.luxbar-item a {
+  padding: 18px 24px 18px 24px;
+  display: block;
+}
+
+/* line 78, ../assets/sass/luxbar/_mobile.scss */
+.luxbar-hamburger {
+  padding: 18px 24px 18px 24px;
+  position: relative;
+  cursor: pointer;
+}
+/* line 86, ../assets/sass/luxbar/_mobile.scss */
+.luxbar-hamburger span::before, .luxbar-hamburger span::after {
+  content: '';
+  position: absolute;
+}
+/* line 93, ../assets/sass/luxbar/_mobile.scss */
+.luxbar-hamburger span::before {
+  margin-top: -8px;
+}
+/* line 97, ../assets/sass/luxbar/_mobile.scss */
+.luxbar-hamburger span::after {
+  margin-top: 8px;
+}
+
+/* line 103, ../assets/sass/luxbar/_mobile.scss */
+.luxbar-checkbox {
+  display: none;
+}
+/* line 106, ../assets/sass/luxbar/_mobile.scss */
+.luxbar-checkbox:not(:checked) ~ .luxbar-menu {
+  overflow: hidden;
+  height: 58px;
+}
+/* line 111, ../assets/sass/luxbar/_mobile.scss */
+.luxbar-checkbox:checked ~ .luxbar-menu {
+  transition: height 0.6s ease;
+  height: 100vh;
+  overflow: auto;
+}
+
+/* line 124, ../assets/sass/luxbar/_mobile.scss */
+.dropdown {
+  position: relative;
+  height: auto;
+  min-height: 58px;
+}
+/* line 129, ../assets/sass/luxbar/_mobile.scss */
+.dropdown:hover > ul {
+  position: relative;
+  display: block;
+  min-width: 100%;
+}
+/* line 136, ../assets/sass/luxbar/_mobile.scss */
+.dropdown > a::after {
+  position: absolute;
+  content: '';
+  right: 10px;
+  top: 25px;
+  border-width: 5px 5px 0;
+  border-color: transparent;
+  border-style: solid;
+}
+/* line 149, ../assets/sass/luxbar/_mobile.scss */
+.dropdown > ul {
+  display: block;
+  overflow-x: hidden;
+  list-style: none;
+  padding: 0;
+}
+/* line 155, ../assets/sass/luxbar/_mobile.scss */
+.dropdown > ul .luxbar-item {
+  min-width: 100%;
+  height: 29px;
+  padding: 5px 10px 5px 40px;
+}
+/* line 160, ../assets/sass/luxbar/_mobile.scss */
+.dropdown > ul .luxbar-item a {
+  min-height: 29px;
+  line-height: 29px;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 2, ../assets/sass/luxbar/_non-mobile.scss */
+  .luxbar-navigation {
+    flex-flow: row;
+    justify-content: flex-end;
+  }
+
+  /* line 7, ../assets/sass/luxbar/_non-mobile.scss */
+  .luxbar-hamburger {
+    display: none;
+  }
+
+  /* line 12, ../assets/sass/luxbar/_non-mobile.scss */
+  .luxbar-checkbox:not(:checked) ~ .luxbar-menu {
+    overflow: visible;
+  }
+  /* line 16, ../assets/sass/luxbar/_non-mobile.scss */
+  .luxbar-checkbox:checked ~ .luxbar-menu {
+    height: 58px;
+  }
+
+  /* line 22, ../assets/sass/luxbar/_non-mobile.scss */
+  .luxbar-menu .luxbar-item {
+    border-top: 0;
+  }
+
+  /* line 28, ../assets/sass/luxbar/_non-mobile.scss */
+  .luxbar-menu-right .luxbar-header {
+    margin-right: auto;
+  }
+
+  /* line 32, ../assets/sass/luxbar/_non-mobile.scss */
+  .dropdown {
+    height: 58px;
+  }
+  /* line 35, ../assets/sass/luxbar/_non-mobile.scss */
+  .dropdown:hover > ul {
+    position: absolute;
+    left: 0;
+    top: 58px;
+    padding: 0;
+  }
+  /* line 42, ../assets/sass/luxbar/_non-mobile.scss */
+  .dropdown > ul {
+    display: none;
+  }
+  /* line 45, ../assets/sass/luxbar/_non-mobile.scss */
+  .dropdown > ul .luxbar-item {
+    padding: 5px 10px;
+  }
+  /* line 48, ../assets/sass/luxbar/_non-mobile.scss */
+  .dropdown > ul .luxbar-item a {
+    white-space: nowrap;
+  }
+}
+/* line 6, ../assets/sass/luxbar/hamburger-animation/_doublespin.scss */
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-doublespin span::before {
+  transform: rotate(225deg);
+}
+/* line 10, ../assets/sass/luxbar/hamburger-animation/_doublespin.scss */
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-doublespin span::after {
+  transform: rotate(-225deg);
+}
+
+/* line 6, ../assets/sass/luxbar/hamburger-animation/_spin.scss */
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-spin span::before {
+  transform: rotate(45deg);
+}
+/* line 10, ../assets/sass/luxbar/hamburger-animation/_spin.scss */
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-spin span::after {
+  transform: rotate(-45deg);
+}
+
+/******* color variables *******/
+/******* default dark *******/
+/* line 39, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-dark,
+.luxbar-menu-dark .dropdown ul {
+  background-color: #212121;
+  color: #fff;
+}
+
+/* line 46, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-dark .active,
+.luxbar-menu-dark .luxbar-item:hover {
+  background-color: #424242;
+}
+/* line 52, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-dark .luxbar-hamburger span,
+.luxbar-menu-dark .luxbar-hamburger span::before,
+.luxbar-menu-dark .luxbar-hamburger span::after {
+  background-color: #fff;
+}
+
+/******* default light *******/
+/* line 61, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-light,
+.luxbar-menu-light .dropdown ul {
+  background-color: #e0e0e0;
+  color: #212121;
+}
+
+/* line 68, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-light .active,
+.luxbar-menu-light .luxbar-item:hover {
+  background-color: #bdbdbd;
+}
+/* line 74, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-light .luxbar-hamburger span,
+.luxbar-menu-light .luxbar-hamburger span::before,
+.luxbar-menu-light .luxbar-hamburger span::after {
+  background-color: #212121;
+}
+
+/******* default material-red *******/
+/* line 83, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-red,
+.luxbar-menu-material-red .dropdown ul {
+  background-color: #b71c1c;
+  color: #fff;
+}
+
+/* line 90, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-red .active,
+.luxbar-menu-material-red .luxbar-item:hover {
+  background-color: #c62828;
+}
+/* line 96, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-red .luxbar-hamburger span,
+.luxbar-menu-material-red .luxbar-hamburger span::before,
+.luxbar-menu-material-red .luxbar-hamburger span::after {
+  background-color: #fff;
+}
+
+/******* default material-indigo *******/
+/* line 105, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-indigo,
+.luxbar-menu-material-indigo .dropdown ul {
+  background-color: #1a237e;
+  color: #fff;
+}
+
+/* line 112, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-indigo .active,
+.luxbar-menu-material-indigo .luxbar-item:hover {
+  background-color: #283593;
+}
+/* line 118, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-indigo .luxbar-hamburger span,
+.luxbar-menu-material-indigo .luxbar-hamburger span::before,
+.luxbar-menu-material-indigo .luxbar-hamburger span::after {
+  background-color: #fff;
+}
+
+/******* default material-green *******/
+/* line 127, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-green,
+.luxbar-menu-material-green .dropdown ul {
+  background-color: #1b5e20;
+  color: #fff;
+}
+
+/* line 134, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-green .active,
+.luxbar-menu-material-green .luxbar-item:hover {
+  background-color: #2e7d32;
+}
+/* line 140, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-green .luxbar-hamburger span,
+.luxbar-menu-material-green .luxbar-hamburger span::before,
+.luxbar-menu-material-green .luxbar-hamburger span::after {
+  background-color: #fff;
+}
+
+/******* default material-amber *******/
+/* line 149, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-amber,
+.luxbar-menu-material-amber .dropdown ul {
+  background-color: #ff6f00;
+  color: #fff;
+}
+
+/* line 156, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-amber .active,
+.luxbar-menu-material-amber .luxbar-item:hover {
+  background-color: #ff8f00;
+}
+/* line 162, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-amber .luxbar-hamburger span,
+.luxbar-menu-material-amber .luxbar-hamburger span::before,
+.luxbar-menu-material-amber .luxbar-hamburger span::after {
+  background-color: #fff;
+}
+
+/******* default material-brown *******/
+/* line 171, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-brown,
+.luxbar-menu-material-brown .dropdown ul {
+  background-color: #3e2723;
+  color: #fff;
+}
+
+/* line 178, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-brown .active,
+.luxbar-menu-material-brown .luxbar-item:hover {
+  background-color: #4e342e;
+}
+/* line 184, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-brown .luxbar-hamburger span,
+.luxbar-menu-material-brown .luxbar-hamburger span::before,
+.luxbar-menu-material-brown .luxbar-hamburger span::after {
+  background-color: #fff;
+}
+
+/******* default material-bluegrey *******/
+/* line 193, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-bluegrey,
+.luxbar-menu-material-bluegrey .dropdown ul {
+  background-color: #263238;
+  color: #fff;
+}
+
+/* line 200, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-bluegrey .active,
+.luxbar-menu-material-bluegrey .luxbar-item:hover {
+  background-color: #37474f;
+}
+/* line 206, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-bluegrey .luxbar-hamburger span,
+.luxbar-menu-material-bluegrey .luxbar-hamburger span::before,
+.luxbar-menu-material-bluegrey .luxbar-hamburger span::after {
+  background-color: #fff;
+}
+
+/******* default material-cyan *******/
+/* line 215, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-cyan,
+.luxbar-menu-material-cyan .dropdown ul {
+  background-color: #006064;
+  color: #fff;
+}
+
+/* line 222, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-cyan .active,
+.luxbar-menu-material-cyan .luxbar-item:hover {
+  background-color: #00838f;
+}
+/* line 228, ../assets/sass/luxbar/_themes.scss */
+.luxbar-menu-material-cyan .luxbar-hamburger span,
+.luxbar-menu-material-cyan .luxbar-hamburger span::before,
+.luxbar-menu-material-cyan .luxbar-hamburger span::after {
+  background-color: #fff;
+}

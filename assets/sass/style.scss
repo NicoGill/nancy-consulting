@@ -43,6 +43,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 @import "compass/css3/font-face";
+@import "compass/css3/flexbox";
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
 
@@ -50,6 +51,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Vital.css
 --------------------------------------------------------------*/
 @import "vital";
+
+/*--------------------------------------------------------------
+# luxbar.css
+--------------------------------------------------------------*/
+@import "luxbar/luxbar";
+
+/*--------------------------------------------------------------
+# gridlex.css
+--------------------------------------------------------------*/
+@import "gridlex/gridlex";
 
 /*--------------------------------------------------------------
 # Typography

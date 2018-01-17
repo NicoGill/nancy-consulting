@@ -47,7 +47,7 @@ function ncv2_cpt() {
 		'labels' => $labels_realisation,
 		'menu_icon' => 'dashicons-art',
 		'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'author', ),
-		'taxonomies' => array(),
+		'taxonomies' => array('categorie_realisation'),
 		'public' => true,
 		'show_ui' => true,
 		'show_in_menu' => true,
@@ -63,6 +63,35 @@ function ncv2_cpt() {
 		'capability_type' => 'post',
 	);
 	register_post_type( 'realisation', $args_realisation );
+
+	$labels_cat_rea = array(
+		'name'              => _x( 'Catégories', 'taxonomy general name', 'ncv2' ),
+		'singular_name'     => _x( 'Catégorie', 'taxonomy singular name', 'ncv2' ),
+		'search_items'      => __( 'Recherche une catégorie', 'ncv2' ),
+		'all_items'         => __( 'Toutes les catégories', 'ncv2' ),
+		'parent_item'       => __( 'Catégorie parente', 'ncv2' ),
+		'parent_item_colon' => __( 'Parent Categorie:', 'ncv2' ),
+		'edit_item'         => __( 'Editer la catégorie', 'ncv2' ),
+		'update_item'       => __( 'Modifier la catégorie', 'ncv2' ),
+		'add_new_item'      => __( 'Ajouter une nouvelle catégorie', 'ncv2' ),
+		'new_item_name'     => __( 'Nouvelle catégorie', 'ncv2' ),
+		'menu_name'         => __( 'Categories', 'ncv2' ),
+	);
+	$args_cat_rea = array(
+		'labels' => $labels_cat_rea,
+		'description' => __( '', 'ncv2' ),
+		'hierarchical' => false,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'show_in_nav_menus' => true,
+		'show_in_rest' => false,
+		'show_tagcloud' => true,
+		'show_in_quick_edit' => true,
+		'show_admin_column' => false,
+	);
+	register_taxonomy( 'categorie_realisation', array('realisation'), $args_cat_rea );
 
 }
 add_action( 'init', 'ncv2_cpt', 0 );
