@@ -2,7 +2,7 @@
 /**
  * _wpng Theme Customizer
  *
- * @package _wpng
+ * @package _ncv2
  */
 
 /**

@@ -5,7 +5,7 @@
   *
   * @link https://codex.wordpress.org/Plugin_API/Filter_Reference
   *
-  * @package _wpng
+  * @package _ncv2
   */
 
 function ncv2_sanitize_french_chars($filename) {

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package _wpng
+ * @package _ncv2
  */
 
 if ( ! function_exists( 'ncv2_setup' ) ) :
@@ -44,6 +44,7 @@ if ( ! function_exists( 'ncv2_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
+			'menu-home' => esc_html__( 'Menu page d\'accueil', 'ncv2' ),
 			'menu-principal' => esc_html__( 'Menu principal', 'ncv2' ),
 		) );
 

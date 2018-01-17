@@ -5,5 +5,5 @@
  *
  * @link https://codex.wordpress.org/AJAX
  *
- * @package _wpng
+ * @package _ncv2
  */

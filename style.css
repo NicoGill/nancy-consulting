@@ -2846,6 +2846,9 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
+## Home
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
@@ -2964,4 +2967,332 @@ object {
 /* line 19, assets/sass/media/_galleries.scss */
 .gallery-caption {
   display: block;
+}
+
+/*--------------------------------------------------------------
+# slick.css
+--------------------------------------------------------------*/
+/* Slider */
+/* line 3, assets/sass/slick/_slick.scss */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 17, assets/sass/slick/_slick.scss */
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+/* line 24, assets/sass/slick/_slick.scss */
+.slick-list:focus {
+  outline: none;
+}
+/* line 28, assets/sass/slick/_slick.scss */
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 33, assets/sass/slick/_slick.scss */
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 42, assets/sass/slick/_slick.scss */
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 50, assets/sass/slick/_slick.scss */
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+/* line 56, assets/sass/slick/_slick.scss */
+.slick-track:after {
+  clear: both;
+}
+/* line 60, assets/sass/slick/_slick.scss */
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+/* line 64, assets/sass/slick/_slick.scss */
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+/* line 68, assets/sass/slick/_slick.scss */
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+/* line 71, assets/sass/slick/_slick.scss */
+.slick-slide img {
+  display: block;
+}
+/* line 74, assets/sass/slick/_slick.scss */
+.slick-slide.slick-loading img {
+  display: none;
+}
+/* line 80, assets/sass/slick/_slick.scss */
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+/* line 84, assets/sass/slick/_slick.scss */
+.slick-initialized .slick-slide {
+  display: block;
+}
+/* line 88, assets/sass/slick/_slick.scss */
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+/* line 92, assets/sass/slick/_slick.scss */
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+/* line 98, assets/sass/slick/_slick.scss */
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* Slider */
+/* line 46, assets/sass/slick/_slick-theme.scss */
+.slick-loading .slick-list {
+  background: #fff url('assets/img/ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url('assets/css/fonts/slick.eot');
+  src: url('assets/css/fonts/slick.eot?#iefix') format("embedded-opentype"), url('assets/css/fonts/slick.woff') format("woff"), url('assets/css/fonts/slick.ttf') format("truetype"), url('assets/css/fonts/slick.svg#slick') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Arrows */
+/* line 64, assets/sass/slick/_slick-theme.scss */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none;
+}
+/* line 82, assets/sass/slick/_slick-theme.scss */
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  outline: none;
+  background: transparent;
+  color: transparent;
+}
+/* line 86, assets/sass/slick/_slick-theme.scss */
+.slick-prev:hover:before, .slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+/* line 90, assets/sass/slick/_slick-theme.scss */
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+/* line 93, assets/sass/slick/_slick-theme.scss */
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 104, assets/sass/slick/_slick-theme.scss */
+.slick-prev {
+  left: -25px;
+}
+/* line 106, assets/sass/slick/_slick-theme.scss */
+[dir="rtl"] .slick-prev {
+  left: auto;
+  right: -25px;
+}
+/* line 110, assets/sass/slick/_slick-theme.scss */
+.slick-prev:before {
+  content: "←";
+}
+/* line 112, assets/sass/slick/_slick-theme.scss */
+[dir="rtl"] .slick-prev:before {
+  content: "→";
+}
+
+/* line 118, assets/sass/slick/_slick-theme.scss */
+.slick-next {
+  right: -25px;
+}
+/* line 120, assets/sass/slick/_slick-theme.scss */
+[dir="rtl"] .slick-next {
+  left: -25px;
+  right: auto;
+}
+/* line 124, assets/sass/slick/_slick-theme.scss */
+.slick-next:before {
+  content: "→";
+}
+/* line 126, assets/sass/slick/_slick-theme.scss */
+[dir="rtl"] .slick-next:before {
+  content: "←";
+}
+
+/* Dots */
+/* line 134, assets/sass/slick/_slick-theme.scss */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+/* line 138, assets/sass/slick/_slick-theme.scss */
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+/* line 147, assets/sass/slick/_slick-theme.scss */
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+/* line 155, assets/sass/slick/_slick-theme.scss */
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  line-height: 0px;
+  font-size: 0px;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+/* line 167, assets/sass/slick/_slick-theme.scss */
+.slick-dots li button:hover, .slick-dots li button:focus {
+  outline: none;
+}
+/* line 169, assets/sass/slick/_slick-theme.scss */
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+  opacity: 1;
+}
+/* line 173, assets/sass/slick/_slick-theme.scss */
+.slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "•";
+  width: 20px;
+  height: 20px;
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+  text-align: center;
+  color: #ED8662;
+  opacity: 0.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 190, assets/sass/slick/_slick-theme.scss */
+.slick-dots li.slick-active button:before {
+  color: #ED8662;
+  opacity: 0.75;
+}
+
+/*--------------------------------------------------------------
+# Partials
+--------------------------------------------------------------*/
+/* line 1, assets/sass/partials/_heroes.scss */
+.hero {
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 200px;
+  position: relative;
+  background: linear-gradient(to bottom right, #ED8662, #43455A);
+}
+/* line 6, assets/sass/partials/_heroes.scss */
+.hero h1 {
+  color: #FFF;
+  font-size: 30px;
+}
+/* line 10, assets/sass/partials/_heroes.scss */
+.hero p {
+  color: #FFF;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 860px) {
+  /* line 18, assets/sass/partials/_heroes.scss */
+  .hero h1 {
+    color: #FFF;
+    font-size: 22px;
+  }
+  /* line 22, assets/sass/partials/_heroes.scss */
+  .hero p {
+    color: #FFF;
+    font-size: 16px;
+  }
 }

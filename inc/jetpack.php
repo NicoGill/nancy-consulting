@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package _wpng
+ * @package _ncv2
  */
 
 /**

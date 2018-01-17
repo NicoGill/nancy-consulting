@@ -3,7 +3,7 @@
 /**
  * Wordpress backoffice function helpers or styling
  *
- * @package _wpng
+ * @package _ncv2
  */
 
 function ncv2_login_logo() {

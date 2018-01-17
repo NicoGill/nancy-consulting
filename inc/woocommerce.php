@@ -4,7 +4,7 @@
  *
  * @link https://woocommerce.com/
  *
- * @package _wpng
+ * @package _ncv2
  */
 
 /**

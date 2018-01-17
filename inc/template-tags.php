@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package _wpng
+ * @package _ncv2
  */
 
 if ( ! function_exists( 'ncv2_posted_on' ) ) :

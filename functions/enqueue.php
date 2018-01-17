@@ -3,7 +3,7 @@
  /**
   * Wordpress enqueue styles & scripts cleaning
   *
-  * @package _wpng
+  * @package _ncv2
   */
 
 // Load HTML5 Blank scripts (header.php)

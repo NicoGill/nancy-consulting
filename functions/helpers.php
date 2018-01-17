@@ -3,7 +3,7 @@
 /**
  * Global PHP functions helper
  *
- * @package _wpng
+ * @package _ncv2
  */
 
 if ( ! function_exists('write_log')) {

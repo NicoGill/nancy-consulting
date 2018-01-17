@@ -3,7 +3,7 @@
 /**
  * Init WPNG Wordpress starter theme
  *
- * @package _wpng
+ * @package _ncv2
  */
 
 /*
@@ -15,8 +15,8 @@ function ncv2_cpt() {
 	$labels_realisation = array(
 		'name' => __( 'Réalisations', 'Post Type General Name', 'ncv2' ),
 		'singular_name' => __( 'Réalisation', 'Post Type Singular Name', 'ncv2' ),
-		'menu_name' => __( 'Réalisation', 'ncv2' ),
-		'name_admin_bar' => __( 'Réalisation', 'ncv2' ),
+		'menu_name' => __( 'Réalisations', 'ncv2' ),
+		'name_admin_bar' => __( 'Réalisations', 'ncv2' ),
 		'archives' => __( 'Archives réalisation', 'ncv2' ),
 		'attributes' => __( 'Attributs réalisation', 'ncv2' ),
 		'parent_item_colon' => __( 'Parents réalisation:', 'ncv2' ),
