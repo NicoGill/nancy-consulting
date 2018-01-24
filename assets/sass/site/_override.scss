@@ -1,0 +1,71 @@
+// ligne 119 base scss /vital
+// .section {
+//   padding: 0;
+// }
+
+//
+[class~="col"], [class*="col-"], [class*="col_"] {
+  padding-bottom: 0;
+}
+
+// ligne 129 base scss /vital
+// @media screen and (min-width: $desktop-large) {
+//   .section {
+//     width: 70%
+//   }
+// }
+/* line 8, assets/sass/gridlex/_gridlex.scss */
+[class~="grid"],
+[class*="grid-"],
+[class*="grid_"] {
+  margin:0;
+}
+
+/* line 2, assets/sass/luxbar/_non-mobile.scss */
+@media screen and (min-width: 768px) {
+  .luxbar-navigation {
+    @include align-items(center);
+  }
+}
+
+.luxbar .luxbar-checkbox {
+  display: none;
+}
+
+.luxbar-hamburger {
+  span, span::before, span::after {
+    background-color: $color__brand-main;
+  }
+}
+
+.luxbar-menu-light {
+  background-color: rgba(255,255,255,0.75);
+  .dropdown{
+    ul {
+      background-color: rgba(255,255,255,0.75);
+    }
+  }
+}
+
+.luxbar-menu, .luxbar-item {
+  li {
+    padding: 0 20px;
+    a {
+      text-transform: uppercase;
+      // color: $black;
+      font-weight: bold;
+    }
+  }
+}
+
+/* contact form */
+.wpcf7-form-control-wrap {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.hero {
+  .section {
+    padding-top: 9em;
+  }
+}

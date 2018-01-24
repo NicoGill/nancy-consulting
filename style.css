@@ -1845,6 +1845,93 @@ img.largest {
     width: 100%;
   }
 }
+/* line 3, assets/sass/vital/layouts/_background_cards.sass */
+.boxed-image,
+.boxed-action,
+.boxed-meta {
+  position: absolute;
+}
+
+/* line 7, assets/sass/vital/layouts/_background_cards.sass */
+.boxed-image,
+.boxed-action {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* line 13, assets/sass/vital/layouts/_background_cards.sass */
+.boxed-image {
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* line 15, assets/sass/vital/layouts/_background_cards.sass */
+.boxed-meta {
+  bottom: 0;
+  z-index: 1;
+}
+
+/* line 18, assets/sass/vital/layouts/_background_cards.sass */
+.boxed-action {
+  opacity: 0;
+  padding: 20% 0 0;
+  z-index: 2;
+}
+
+/* line 22, assets/sass/vital/layouts/_background_cards.sass */
+.boxed {
+  padding-top: 80%;
+  position: relative;
+  text-align: center;
+}
+/* line 27, assets/sass/vital/layouts/_background_cards.sass */
+.boxed:hover .boxed-action {
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+
+@media screen and (max-width: 1080px) {
+  /* line 35, assets/sass/vital/layouts/_background_cards.sass */
+  .boxed-backgrounds [class*='col-'] {
+    width: 50%;
+  }
+  /* line 37, assets/sass/vital/layouts/_background_cards.sass */
+  .boxed-backgrounds .clear {
+    display: none;
+  }
+}
+@media screen and (max-width: 667px) {
+  /* line 43, assets/sass/vital/layouts/_background_cards.sass */
+  .boxed-backgrounds [class*='col-'] {
+    width: 100%;
+  }
+}
+/* line 3, assets/sass/vital/layouts/_feed_cards.sass */
+.feed-card {
+  background: #FFF;
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.05);
+  padding: 1em;
+  margin: 0.3em;
+}
+/* line 8, assets/sass/vital/layouts/_feed_cards.sass */
+.feed-card img {
+  border-radius: 0;
+  height: auto;
+  width: 100%;
+}
+/* line 12, assets/sass/vital/layouts/_feed_cards.sass */
+.feed-card * {
+  margin: 0.2em 0;
+}
+
 /*--------------------------------------------------------------
 # luxbar.css
 --------------------------------------------------------------*/
@@ -1911,7 +1998,7 @@ img.largest {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 58px;
+  height: 70px;
 }
 
 /* line 30, assets/sass/luxbar/_mobile.scss */
@@ -1932,7 +2019,7 @@ img.largest {
 
 /* line 46, assets/sass/luxbar/_mobile.scss */
 .luxbar-menu {
-  min-height: 58px;
+  min-height: 70px;
   transition: 0.6s ease;
   width: 100%;
 }
@@ -1956,7 +2043,7 @@ img.largest {
 
 /* line 69, assets/sass/luxbar/_mobile.scss */
 .luxbar-item {
-  height: 58px;
+  height: 70px;
 }
 /* line 72, assets/sass/luxbar/_mobile.scss */
 .luxbar-item a {
@@ -1991,7 +2078,7 @@ img.largest {
 /* line 106, assets/sass/luxbar/_mobile.scss */
 .luxbar-checkbox:not(:checked) ~ .luxbar-menu {
   overflow: hidden;
-  height: 58px;
+  height: 70px;
 }
 /* line 111, assets/sass/luxbar/_mobile.scss */
 .luxbar-checkbox:checked ~ .luxbar-menu {
@@ -2004,7 +2091,7 @@ img.largest {
 .dropdown {
   position: relative;
   height: auto;
-  min-height: 58px;
+  min-height: 70px;
 }
 /* line 129, assets/sass/luxbar/_mobile.scss */
 .dropdown:hover > ul {
@@ -2017,7 +2104,7 @@ img.largest {
   position: absolute;
   content: '';
   right: 10px;
-  top: 25px;
+  top: 31px;
   border-width: 5px 5px 0;
   border-color: transparent;
   border-style: solid;
@@ -2032,13 +2119,13 @@ img.largest {
 /* line 155, assets/sass/luxbar/_mobile.scss */
 .dropdown > ul .luxbar-item {
   min-width: 100%;
-  height: 29px;
+  height: 35px;
   padding: 5px 10px 5px 40px;
 }
 /* line 160, assets/sass/luxbar/_mobile.scss */
 .dropdown > ul .luxbar-item a {
-  min-height: 29px;
-  line-height: 29px;
+  min-height: 35px;
+  line-height: 35px;
   padding: 0;
 }
 
@@ -2060,7 +2147,7 @@ img.largest {
   }
   /* line 16, assets/sass/luxbar/_non-mobile.scss */
   .luxbar-checkbox:checked ~ .luxbar-menu {
-    height: 58px;
+    height: 70px;
   }
 
   /* line 22, assets/sass/luxbar/_non-mobile.scss */
@@ -2075,13 +2162,13 @@ img.largest {
 
   /* line 32, assets/sass/luxbar/_non-mobile.scss */
   .dropdown {
-    height: 58px;
+    height: 70px;
   }
   /* line 35, assets/sass/luxbar/_non-mobile.scss */
   .dropdown:hover > ul {
     position: absolute;
     left: 0;
-    top: 58px;
+    top: 70px;
     padding: 0;
   }
   /* line 42, assets/sass/luxbar/_non-mobile.scss */
@@ -4179,14 +4266,38 @@ textarea {
   font-family: "Poppins", Helvetica, sans-serif;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.7;
+  font-weight: 300;
 }
 
 /* line 1, assets/sass/typography/_headings.scss */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
   font-family: "Poppins", Helvetica, sans-serif;
+}
+
+/* line 31, assets/sass/typography/_headings.scss */
+.head-section hr {
+  border: 0;
+  margin: 0 auto 30px 0;
+  height: 3px;
+  width: 100px;
+  background: #ed8662;
+}
+/* line 38, assets/sass/typography/_headings.scss */
+.head-section h2 {
   text-transform: uppercase;
+  text-transform: none;
+  color: #43455a;
+}
+/* line 45, assets/sass/typography/_headings.scss */
+.head-section h3 {
+  color: #888888;
+  font-style: italic;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  font-weight: 200;
 }
 
 /* line 1, assets/sass/typography/_copy.scss */
@@ -4215,7 +4326,7 @@ pre {
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
   font-size: 0.9375rem;
-  line-height: 1.6;
+  line-height: 1.8;
   margin-bottom: 1.6em;
   max-width: 100%;
   overflow: auto;
@@ -4244,6 +4355,75 @@ mark, ins {
 /* line 43, assets/sass/typography/_copy.scss */
 big {
   font-size: 125%;
+}
+
+/* line 36, assets/sass/typography/_typography.scss */
+body {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSI1JSIgc3RvcC1jb2xvcj0iI2UxZTFlMSIvPjxzdG9wIG9mZnNldD0iNSUiIHN0b3AtY29sb3I9IiNlMWUxZTEiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, #e1e1e1), color-stop(5%, rgba(225, 225, 225, 0)));
+  background-image: -moz-linear-gradient(bottom, #e1e1e1 5%, rgba(225, 225, 225, 0) 5%);
+  background-image: -webkit-linear-gradient(bottom, #e1e1e1 5%, rgba(225, 225, 225, 0) 5%);
+  background-image: linear-gradient(to top, #e1e1e1 5%, rgba(225, 225, 225, 0) 5%);
+  -moz-background-size: 100% 24px;
+  -o-background-size: 100% 24px;
+  -webkit-background-size: 100% 24px;
+  background-size: 100% 24px;
+  background-position: left top;
+  margin: 0;
+}
+
+/* line 31, assets/sass/typography/_typography.scss */
+html {
+  font: 100%/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 45, assets/sass/typography/_typography.scss */
+h1, .h1 {
+  font-size: 3em;
+  line-height: 1.5em;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+}
+
+/* line 45, assets/sass/typography/_typography.scss */
+h2, .h2 {
+  font-size: 2.25em;
+  line-height: 1.33333em;
+  margin-top: 0em;
+  margin-bottom: 0.66667em;
+}
+
+/* line 45, assets/sass/typography/_typography.scss */
+h3, .h3 {
+  font-size: 1.5em;
+  line-height: 2em;
+  margin-top: 0em;
+  margin-bottom: 1em;
+}
+
+/* line 45, assets/sass/typography/_typography.scss */
+h4, .h4 {
+  font-size: 1.3125em;
+  line-height: 2.28571em;
+  margin-top: 0em;
+  margin-bottom: 1.14286em;
+}
+
+/* line 45, assets/sass/typography/_typography.scss */
+h5, .h5 {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  margin-top: 0em;
+  margin-bottom: 1.33333em;
+}
+
+/* line 45, assets/sass/typography/_typography.scss */
+h6, .h6 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 0em;
+  margin-bottom: 1.5em;
 }
 
 /*--------------------------------------------------------------
@@ -4612,6 +4792,189 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Home
 --------------------------------------------------------------*/
+/* line 2, assets/sass/site/page/_home.scss */
+.progress-grid .col {
+  position: relative;
+}
+
+/* line 7, assets/sass/site/page/_home.scss */
+.number {
+  border-radius: 50%;
+  border: 1px solid #ED8662;
+  background-color: #ED8662;
+  width: 50px;
+  height: 50px;
+  margin: 50px auto;
+  color: #FFF;
+  font-size: 18px;
+  line-height: 18px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+/* line 22, assets/sass/site/page/_home.scss */
+.number:before, .number:after {
+  content: '';
+  position: absolute;
+  width: 80%;
+  background-color: #eee;
+  left: -40%;
+  margin-top: 75px;
+  top: 0;
+  height: 1px;
+  opacity: 0.75;
+}
+/* line 33, assets/sass/site/page/_home.scss */
+.number:after {
+  width: 0px;
+  height: 2px;
+  bottom: 20px;
+  -webkit-transition: width 0.5s linear;
+  -moz-transition: width 0.5s linear;
+  transition: width 0.5s linear;
+}
+/* line 41, assets/sass/site/page/_home.scss */
+.number.first:before {
+  content: none;
+}
+
+/* line 46, assets/sass/site/page/_home.scss */
+.text-number {
+  padding: 0 20px;
+}
+/* line 48, assets/sass/site/page/_home.scss */
+.text-number p {
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  text-align: justify;
+}
+
+/* line 55, assets/sass/site/page/_home.scss */
+.cat-realisation {
+  padding: 15px 20px;
+}
+/* line 57, assets/sass/site/page/_home.scss */
+.cat-realisation img {
+  max-height: 100px;
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+/* line 63, assets/sass/site/page/_home.scss */
+.cat-realisation h3 {
+  font-size: 16px;
+  font-size: 1rem;
+  margin: 20px auto 0;
+}
+
+/* line 68, assets/sass/site/page/_home.scss */
+.container-realisation {
+  position: relative;
+}
+/* line 70, assets/sass/site/page/_home.scss */
+.container-realisation .tab {
+  display: none;
+  z-index: 1;
+}
+/* line 73, assets/sass/site/page/_home.scss */
+.container-realisation .tab.tab-active {
+  display: block;
+}
+
+/* line 1, assets/sass/site/_helpers.scss */
+.pad-v-md {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* line 6, assets/sass/site/_helpers.scss */
+.pad-v-lg {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* line 11, assets/sass/site/_helpers.scss */
+.bg-gray-lightest {
+  background-color: #fafafa;
+}
+
+/* line 16, assets/sass/site/_helpers.scss */
+hr .space {
+  margin: 40px auto;
+  border: 0;
+  background: transparent;
+  height: 1px;
+}
+
+/* line 7, assets/sass/site/_override.scss */
+[class~="col"], [class*="col-"], [class*="col_"] {
+  padding-bottom: 0;
+}
+
+/* line 8, assets/sass/gridlex/_gridlex.scss */
+/* line 18, assets/sass/site/_override.scss */
+[class~="grid"],
+[class*="grid-"],
+[class*="grid_"] {
+  margin: 0;
+}
+
+/* line 2, assets/sass/luxbar/_non-mobile.scss */
+@media screen and (min-width: 768px) {
+  /* line 26, assets/sass/site/_override.scss */
+  .luxbar-navigation {
+    -webkit-align-items: center;
+    align-items: center;
+  }
+}
+/* line 31, assets/sass/site/_override.scss */
+.luxbar .luxbar-checkbox {
+  display: none;
+}
+
+/* line 36, assets/sass/site/_override.scss */
+.luxbar-hamburger span, .luxbar-hamburger span::before, .luxbar-hamburger span::after {
+  background-color: #43455A;
+}
+
+/* line 41, assets/sass/site/_override.scss */
+.luxbar-menu-light {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+/* line 44, assets/sass/site/_override.scss */
+.luxbar-menu-light .dropdown ul {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* line 51, assets/sass/site/_override.scss */
+.luxbar-menu li, .luxbar-item li {
+  padding: 0 20px;
+}
+/* line 53, assets/sass/site/_override.scss */
+.luxbar-menu li a, .luxbar-item li a {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* contact form */
+/* line 62, assets/sass/site/_override.scss */
+.wpcf7-form-control-wrap {
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* line 68, assets/sass/site/_override.scss */
+.hero .section {
+  padding-top: 9em;
+}
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
@@ -5027,24 +5390,23 @@ object {
 /* line 1, assets/sass/partials/_heroes.scss */
 .hero {
   position: relative;
-  background: linear-gradient(to bottom right, #ED8662, #43455A);
+  background: linear-gradient(to bottom right, #ed8662, #43455a);
   -moz-background-size: cover;
-  -ms-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 /* line 5, assets/sass/partials/_heroes.scss */
 .hero h1 {
   color: #FFF;
-  font-size: 30px;
+  font-size: 64px;
+  font-size: 4rem;
 }
 /* line 9, assets/sass/partials/_heroes.scss */
 .hero p {
   color: #FFF;
-  font-size: 20px;
+  font-size: 25.6px;
+  font-size: 1.6rem;
 }
 
 @media screen and (max-width: 860px) {
@@ -5058,4 +5420,336 @@ object {
     color: #FFF;
     font-size: 16px;
   }
+}
+/* line 1, assets/sass/partials/_services.scss */
+.service-cloud {
+  font-weight: 700;
+  text-align: center;
+  border-right: 1px solid #f0f0f0;
+}
+
+/* line 8, assets/sass/partials/_services.scss */
+.col:last-child .service-cloud {
+  border-right: 0;
+}
+
+/* --------------------------------
+
+Slider
+
+-------------------------------- */
+/* line 84, assets/sass/partials/_services.scss */
+.cd-hero {
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 89, assets/sass/partials/_services.scss */
+.cd-hero-slider {
+  position: relative;
+  height: 360px;
+  overflow: hidden;
+}
+/* line 94, assets/sass/partials/_services.scss */
+.cd-hero-slider li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+/* line 102, assets/sass/partials/_services.scss */
+.cd-hero-slider li.selected {
+  /* this is the visible slide */
+  position: relative;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+/* line 108, assets/sass/partials/_services.scss */
+.cd-hero-slider li.move-left {
+  /* slide hidden on the left */
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+/* line 113, assets/sass/partials/_services.scss */
+.cd-hero-slider li.is-moving, .cd-hero-slider li.selected {
+  /* the is-moving class is assigned to the slide which is moving outside the viewport */
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+  transition: transform 0.5s;
+}
+@media only screen and (min-width: 768px) {
+  /* line 89, assets/sass/partials/_services.scss */
+  .cd-hero-slider {
+    height: 500px;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  /* line 89, assets/sass/partials/_services.scss */
+  .cd-hero-slider {
+    height: 680px;
+  }
+}
+
+/* --------------------------------
+
+Single slide style
+
+-------------------------------- */
+/* line 137, assets/sass/partials/_services.scss */
+.cd-hero-slider li:first-of-type {
+  background-color: #8662ed;
+}
+/* line 141, assets/sass/partials/_services.scss */
+.cd-hero-slider li:nth-of-type(2) {
+  background-color: #6284ed;
+}
+/* line 145, assets/sass/partials/_services.scss */
+.cd-hero-slider li:nth-of-type(3) {
+  background-color: #ed8662;
+}
+/* line 149, assets/sass/partials/_services.scss */
+.cd-hero-slider li:nth-of-type(4) {
+  background-color: #6284ed;
+}
+/* line 153, assets/sass/partials/_services.scss */
+.cd-hero-slider .cd-full-width,
+.cd-hero-slider .cd-half-width {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  padding: 40px 80px;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+/* line 167, assets/sass/partials/_services.scss */
+.cd-hero-slider .cd-img-container {
+  /* hide image on mobile device */
+  display: none;
+}
+/* line 171, assets/sass/partials/_services.scss */
+.cd-hero-slider .cd-img-container img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+/* line 177, assets/sass/partials/_services.scss */
+.cd-hero-slider .cd-bg-video-wrapper {
+  /* hide video on mobile device */
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/* line 187, assets/sass/partials/_services.scss */
+.cd-hero-slider .cd-bg-video-wrapper video {
+  /* you won't see this element in the html, but it will be injected using js */
+  display: block;
+  min-height: 100%;
+  min-width: 100%;
+  max-width: none;
+  height: auto;
+  width: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* --------------------------------
+
+Single slide animation
+
+-------------------------------- */
+@media only screen and (min-width: 768px) {
+  /* line 210, assets/sass/partials/_services.scss */
+  .cd-hero-slider .cd-half-width {
+    opacity: 0;
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    transform: translateX(40px);
+  }
+  /* line 215, assets/sass/partials/_services.scss */
+  .cd-hero-slider .move-left .cd-half-width {
+    -webkit-transform: translateX(-40px);
+    -moz-transform: translateX(-40px);
+    -ms-transform: translateX(-40px);
+    transform: translateX(-40px);
+  }
+  /* line 219, assets/sass/partials/_services.scss */
+  .cd-hero-slider .selected .cd-half-width {
+    /* this is the visible slide */
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+  /* line 225, assets/sass/partials/_services.scss */
+  .cd-hero-slider .is-moving .cd-half-width {
+    /* this is the slide moving outside the viewport
+    wait for the end of the transition on the <li> parent before set opacity to 0 and translate to 40px/-40px */
+    -webkit-transition: opacity 0s 0.5s;
+    -moz-transition: opacity 0s 0.5s;
+    -ms-transition: opacity 0s 0.5s;
+    transition: opacity 0s 0.5s;
+    -webkit-transform: 0s 0.5s;
+    -moz-transform: 0s 0.5s;
+    -ms-transform: 0s 0.5s;
+    transform: 0s 0.5s;
+  }
+  /* line 232, assets/sass/partials/_services.scss */
+  .cd-hero-slider li.selected.from-left .cd-half-width:nth-of-type(2),
+  .cd-hero-slider li.selected.from-right .cd-half-width:first-of-type {
+    /* this is the selected slide - different animation if it's entering from left or right */
+    -webkit-transition: opacity 0.4s 0.2s;
+    -moz-transition: opacity 0.4s 0.2s;
+    -ms-transition: opacity 0.4s 0.2s;
+    transition: opacity 0.4s 0.2s;
+    -webkit-transform: 0.5s 0.2s;
+    -moz-transform: 0.5s 0.2s;
+    -ms-transform: 0.5s 0.2s;
+    transform: 0.5s 0.2s;
+  }
+  /* line 239, assets/sass/partials/_services.scss */
+  .cd-hero-slider li.selected.from-left .cd-half-width:first-of-type,
+  .cd-hero-slider li.selected.from-right .cd-half-width:nth-of-type(2) {
+    /* this is the selected slide - different animation if it's entering from left or right */
+    -webkit-transition: opacity 0.4s 0.4s;
+    -moz-transition: opacity 0.4s 0.4s;
+    -ms-transition: opacity 0.4s 0.4s;
+    transition: opacity 0.4s 0.4s;
+    -webkit-transform: 0.5s 0.4s;
+    -moz-transform: 0.5s 0.4s;
+    -ms-transform: 0.5s 0.4s;
+    transform: 0.5s 0.4s;
+  }
+  /* line 246, assets/sass/partials/_services.scss */
+  .cd-hero-slider .cd-full-width h2,
+  .cd-hero-slider .cd-full-width p,
+  .cd-hero-slider .cd-full-width .cd-btn {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+    -moz-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  /* line 253, assets/sass/partials/_services.scss */
+  .cd-hero-slider .move-left .cd-full-width h2,
+  .cd-hero-slider .move-left .cd-full-width p,
+  .cd-hero-slider .move-left .cd-full-width .cd-btn {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+    -moz-transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+  /* line 260, assets/sass/partials/_services.scss */
+  .cd-hero-slider .selected .cd-full-width h2,
+  .cd-hero-slider .selected .cd-full-width p,
+  .cd-hero-slider .selected .cd-full-width .cd-btn {
+    /* this is the visible slide */
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+  /* line 268, assets/sass/partials/_services.scss */
+  .cd-hero-slider li.is-moving .cd-full-width h2,
+  .cd-hero-slider li.is-moving .cd-full-width p,
+  .cd-hero-slider li.is-moving .cd-full-width .cd-btn {
+    /* this is the slide moving outside the viewport
+    wait for the end of the transition on the li parent before set opacity to 0 and translate to 100px/-100px */
+    -webkit-transition: opacity 0s 0.5s;
+    -moz-transition: opacity 0s 0.5s;
+    -ms-transition: opacity 0s 0.5s;
+    transition: opacity 0s 0.5s;
+    -webkit-transform: 0s 0.5s;
+    -moz-transform: 0s 0.5s;
+    -ms-transform: 0s 0.5s;
+    transform: 0s 0.5s;
+  }
+  /* line 277, assets/sass/partials/_services.scss */
+  .cd-hero-slider li.selected h2 {
+    -webkit-transition: opacity 0.4s 0.2s;
+    -moz-transition: opacity 0.4s 0.2s;
+    -ms-transition: opacity 0.4s 0.2s;
+    transition: opacity 0.4s 0.2s;
+    -webkit-transform: 0.5s 0.2s;
+    -moz-transform: 0.5s 0.2s;
+    -ms-transform: 0.5s 0.2s;
+    transform: 0.5s 0.2s;
+  }
+  /* line 282, assets/sass/partials/_services.scss */
+  .cd-hero-slider li.selected p {
+    -webkit-transition: opacity 0.4s 0.3s;
+    -moz-transition: opacity 0.4s 0.3s;
+    -ms-transition: opacity 0.4s 0.3s;
+    transition: opacity 0.4s 0.3s;
+    -webkit-transform: 0.5s 0.3s;
+    -moz-transform: 0.5s 0.3s;
+    -ms-transform: 0.5s 0.3s;
+    transform: 0.5s 0.3s;
+  }
+  /* line 287, assets/sass/partials/_services.scss */
+  .cd-hero-slider li.selected .cd-btn {
+    -webkit-transition: opacity 0.4s 0.4s;
+    -moz-transition: opacity 0.4s 0.4s;
+    -ms-transition: opacity 0.4s 0.4s;
+    transition: opacity 0.4s 0.4s;
+    -webkit-transform: 0.5s 0.4s;
+    -moz-transform: 0.5s 0.4s;
+    -ms-transform: 0.5s 0.4s;
+    transform: 0.5s 0.4s;
+  }
+}
+/* --------------------------------
+
+Javascript disabled
+
+-------------------------------- */
+/* line 299, assets/sass/partials/_services.scss */
+.no-js .cd-hero-slider li {
+  display: none;
+}
+/* line 302, assets/sass/partials/_services.scss */
+.no-js .cd-hero-slider li.selected {
+  display: block;
+}
+
+/* line 307, assets/sass/partials/_services.scss */
+.no-js .cd-slider-nav {
+  display: none;
 }

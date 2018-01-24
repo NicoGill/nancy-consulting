@@ -4,11 +4,11 @@
   @include background-size(cover);
   h1 {
     color: $white;
-    font-size: 30px;
+    @include font-size(4);
   }
   p {
     color: $white;
-    font-size: 20px;
+    @include font-size(1.6);
   }
 }
 
@@ -24,3 +24,12 @@
     }
   }
 }
+
+// .bg-test {
+//   position: relative;
+//   background: linear-gradient(to bottom right, $color__brand-second, $color__brand-main);
+//   @include background-size(cover);
+//   .blbl {
+//     border: 2px solid $white;
+//   }
+// }

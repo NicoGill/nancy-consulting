@@ -39,7 +39,7 @@ function ncv2_conditional_scripts() {
 }
 
 function ncv2_load_fonts() {
-  wp_register_style('poppins-googleFonts', '//fonts.googleapis.com/css?family=Poppins:400,500,700');
+  wp_register_style('poppins-googleFonts', '//fonts.googleapis.com/css?family=Poppins:200i,300,400,700');
   wp_enqueue_style( 'poppins-googleFonts');
 }
 
